@@ -172,7 +172,7 @@ header {
   .mobileLinksContainer a {
     font-size: 80px;
     line-height: 120px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
   }
 
   .mobileLinksContainer a:hover {
@@ -195,50 +195,10 @@ header {
 }
 
 @media screen and (min-width: 1100px) {
-  .menuRight {
-    display: flex;
-    flex-direction: column;
-    margin-right: auto;
-    /* max-width: 500px; */
-    margin-top: 250px;
-    /* position: absolute; */
-    display: unset;
-    /* top: 0; */
-    /* left: 150px; */
-    width: 50%;
-    display: none;
-  }
+  
+ 
 
-  .menuRight a {
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-  }
+  
 
-  .siteLine {
-    height: 3px;
-    background: white;
-    width: 80px;
-    margin-top: 0.3rem;
-  }
-
-  .menuRight p {
-    margin-bottom: 2rem;
-    width: 80%;
-  }
-
-  .menuLeft {
-    
-  }
-
-  .mobileContentWrapper {
-    /* display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 200px;
-  max-width: 1228px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center; */
-  }
+  
 }
