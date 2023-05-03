@@ -63,7 +63,7 @@ const Work = () => {
           /> */}
         </div>
       </div>
-      <ContactLink />
+      <ContactLink h3Text="Let's" strongText="Talk" linkText="Contact" linkTo="/contact" />
     </main>
   );
 };

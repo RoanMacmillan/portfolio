@@ -4,7 +4,7 @@
     justify-content: center;
     /* filter: opacity(50%); */
     position: relative;
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
     margin-top: 200px;
     
 }
@@ -54,8 +54,9 @@
 }
 
 .portfolioDetailContent {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    /* padding-left: 1.5rem;
+    padding-right: 1.5rem; */
+    
 }
 
 .portfolioDetailContent h3 {
@@ -105,10 +106,10 @@
 }
 
 .portfolioDetail {
-
-    max-width: 1228px;
-    margin-left: auto;
-    margin-right: auto;
+    
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    
 }
 
 
@@ -168,7 +169,7 @@
 
     .test {
         display: flex;
-        margin-top: 10rem;
+        margin-top: 165px;
         gap: 5rem;
         margin-bottom: 5rem;
     }
@@ -205,5 +206,11 @@
     .staticColumn {
         display: flex;
         gap: 2rem;
+    }
+
+    .portfolioDetail {
+        margin-left: auto;
+    margin-right: auto;
+    max-width: 1224px;
     }
 }

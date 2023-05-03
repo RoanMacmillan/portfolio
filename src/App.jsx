@@ -8,6 +8,7 @@ import portfolioData from '../portfolioItemsData.json';
 import PortfolioDetail from './assets/Components/PortfolioDetail/PortfolioDetail';
 import About from "./assets/Components/About/About";
 import Contact from './assets/Components/Contact/Contact';
+import ScrollToTop from "./assets/Components/ScrollToTop/ScrollToTop";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
       <Header />
+      <ScrollToTop />
         <Routes>
         <Route exact path="/" element={<Work />} />
         {portfolioData.map(item => (

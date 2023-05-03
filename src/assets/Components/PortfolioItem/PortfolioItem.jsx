@@ -3,7 +3,6 @@ import styles from "./PortfolioItem.module.css";
 import { Link } from "react-router-dom";
 import useInterSectionObserver from '../userInterSectionObserver/useInterSectionObserver';
 
-
 const PortfolioItem = ({ id, liveSite, label, thumbnail, title, description, className }) => {
 
 
@@ -24,6 +23,8 @@ const PortfolioItem = ({ id, liveSite, label, thumbnail, title, description, cla
       <Link to='/'>
       <span className={styles.liveSite}>{liveSite}</span>
       </Link>
+
+
     </div>
   );
 };

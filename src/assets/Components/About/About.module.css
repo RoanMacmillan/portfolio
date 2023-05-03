@@ -48,6 +48,10 @@
   margin-top: 50px;
 }
 
+.meWrapperDesktop {
+  display: none;
+}
+
   @media screen and (min-width: 700px) {
 
     
@@ -55,6 +59,14 @@
       display: flex;
       flex-direction: column;
       
+    }
+
+    .meWrapperMobile {
+      display: none;
+    }
+
+    .meWrapperDesktop {
+      display: unset;
     }
 
     .aboutTextContainer a {
@@ -67,6 +79,9 @@
       flex-direction: row;
       /* height: 796px; */
       gap: 50px;
+      max-width: 1180px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .meWrapper {
@@ -85,6 +100,7 @@
     .meWrapper {
       height: 450px;
       max-width: 400px;
+      margin-top: auto;
     }
 
     .me {
@@ -101,11 +117,40 @@
       max-width: 500px;
     }
 
+    .greeting {
+      margin-bottom: 0;
+    }
+
+    .aspiringBreak {
+      display: none;
+    }
+
   }
 
 
   @media screen and (min-width: 995px) {
 
 
+    .about h1 {
+      font-size: 80px;
+    }
+
+    .about {
+      margin-top: 184px;
+    }
+
+    .aboutContainer {
+      /* gap: 100px; */
+      justify-content: space-between;
+      
+    }
+
+    .aboutTextContainer p {
+      max-width: 650px;
+    }
+    
+    .meWrapper {
+      height: 500px;
+    }
 
   }

@@ -13,10 +13,10 @@ const Navigation = () => {
       <Link className={styles.prevBtn}>Previous</Link>
       <div className={styles.navUnderline}></div>
       </div>
-      <div className={styles.nextContainer}>
+      {/* <div className={styles.nextContainer}>
       <Link className={styles.nextBtn}>Next</Link>
       <div className={styles.navUnderline}></div>
-      </div>
+      </div> */}
       </div>
     </div>
   )

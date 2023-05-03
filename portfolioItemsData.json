@@ -2,10 +2,11 @@
   {
     "id": "1",
     "thumbnail": "/assets/images/mobile/thumbnails/audio-thumb.png",
-    "label": "Frontend Development",
+    "label": "01-04",
     "title": "Audiophile",
     "detailTitle": "Audio Phile",
-    "description": "A clean user-friendly e-commerce site",
+    "description": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system.",
+    "smallDescription": "A clean user-friendly e-commerce site",
     "liveSite": "View live site",
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
     "detailStatic1": "/assets/images/mobile/detail/audio-main.png",
@@ -17,7 +18,7 @@
   {
     "id": "2",
     "thumbnail": "/assets/images/mobile/thumbnails/gallery-thumb.png",
-    "label": "Frontend Development",
+    "label": "03-04",
     "liveSite": "View live site",
     "title": "Project 2",
     "description": "Nullam tristique, sapien at lobortis ullamcorper, erat quam hendrerit tellus, ac consequat tortor lorem nec augue.",
@@ -26,7 +27,7 @@
   {
     "id": "3",
     "thumbnail": "/assets/images/mobile/thumbnails/min-thumb.png",
-    "label": "Frontend Development",
+    "label": "02-04",
     "liveSite": "View live site",
     "title": "Minimal Portfolio",
     "description": "Suspendisse quis mauris vel orci fermentum hendrerit. Etiam quis lectus at dolor rutrum suscipit a et arcu.",

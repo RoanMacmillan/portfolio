@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import styles from "./PortfolioDetail.module.css";
 import { Link } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
+import ContactLink from "../ContactLink/ContactLink";
+import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
+
 const PortfolioDetail = ({ portfolioData }) => {
   // extracts id parameter to fetch details for corresponding portfolio item
   const { id } = useParams();
@@ -11,6 +14,10 @@ const PortfolioDetail = ({ portfolioData }) => {
   console.log(item);
   const detailTitleArray = item.detailTitle.split(" ");
   const detailTitle = detailTitleArray.join("<br>");
+
+  const [staticWrapperRef, staticWrapperVisible] = useIntersectionObserver();
+  const [staticWrapperRef2, staticWrapperVisible2] = useIntersectionObserver();
+
 
   // const heroStyle = {
   //   backgroundImage: `url(${item.detailHero})`,
@@ -31,7 +38,8 @@ const PortfolioDetail = ({ portfolioData }) => {
         </p>
       </div>
       <div className={styles.portfolioDetailContent}>
-        <div className={styles.staticWrapper}>
+        <div ref={staticWrapperRef} className={`${styles.staticWrapper} ${staticWrapperVisible ? 'fadeInLoad' : 'hidden'}`}>
+
           <img className={styles.staticImg} src={item.detailStatic1}></img>
         </div>
         {/* <div className={styles.backgroundWrapper}>
@@ -39,7 +47,7 @@ const PortfolioDetail = ({ portfolioData }) => {
         <div className={styles.test}>
           <div>
             <p className={styles.about}>About</p>
-            <h3 className={styles.description}>{item.description}</h3>
+            <h3 className={styles.description}>{item.smallDescription}</h3>
           </div>
           <div className={styles.test2}>
             <p className={styles.background}>{item.background}</p>
@@ -60,16 +68,22 @@ const PortfolioDetail = ({ portfolioData }) => {
         </div> */}
 
         <div className={styles.staticColumn}>
-          <div className={styles.staticWrapper}>
+          {/* <div className={styles.staticWrapper}>
             <img className={styles.staticImg} src={item.detailStatic2}></img>
-          </div>
+          </div> */}
 
-          <div className={styles.staticWrapper}>
+<div ref={staticWrapperRef2} className={`${styles.staticWrapper} ${staticWrapperVisible2 ? 'fadeInLoad' : 'hidden'}`}>
             <img className={styles.staticImg} src={item.detailStatic3}></img>
           </div>
         </div>
       </div>
-      <Navigation />
+      {/* <Navigation /> */}
+      <ContactLink
+        h3Text="See"
+        strongText="More"
+        linkText="Portfolio"
+        linkTo="/"
+      />
     </div>
   );
 };
