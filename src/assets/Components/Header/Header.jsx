@@ -50,8 +50,6 @@ const Header = () => {
           ></img>
           {isMenuOpen && (
             <div className={styles.mobileMenu}>
-              <div className={styles.mobileContentWrapper}>
-                <div className={styles.menuLeft}>
                 <div className={styles.mobileLinksContainer}>
                     <Link to="/" onClick={handleLinkClick}>
                       Portfolio
@@ -72,17 +70,8 @@ const Header = () => {
                       <Link>Twitter</Link>
                     </div>
                   </div>
-                </div>
 
-                <div className={styles.menuRight}>
-                  <p>
-                    Aspiring Frontend Developer based in Edinburgh, Scotland.
-                    You can check out my latest project below
-                  </p>
-                  <Link to="/">Audio Ecommerce Site</Link>
-                  <div className={styles.siteLine}></div>
-                </div>
-              </div>
+                
             </div>
           )}
           <div className={styles.desktopLinks}>
