@@ -2,9 +2,15 @@ import React, { useState, useEffect } from "react";
 import styles from './Contact.module.css'
 import Mail from '../../Images/icon-mail.svg'
 import {Link} from 'react-router-dom'
+import ContactLink from '../ContactLink/ContactLink'
+import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
+
 
 
 const Contact = () => {
+
+  const [formWrapperRef, formWrapperVisible] = useIntersectionObserver();
+
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
@@ -66,9 +72,15 @@ const Contact = () => {
     <div className={styles.contact}>
       <h1>Let's<br></br> <strong>Talk</strong></h1>
       <div className={styles.headingLine}></div>
+
+      <div className={styles.contactContainer}>
+
+      <div className={styles.contactText}>
       <h2>Contact form</h2>
       <p className={styles.contactP}>Got a project in mind? Find my contact info below or feel free to fill out the form below with your questions.</p>
+      </div>
       <form onSubmit={handleSubmit} noValidate>
+        <div ref={formWrapperRef} className={`${styles.formWrapper} ${formWrapperVisible ? 'fadeInLoad' : 'hidden' }`}>
         <div className={styles.formTop}>
       <div className={styles.formGroup}>
         <label htmlFor="name">Name{errors.name && <div className={styles.error}>{errors.name}</div>}</label>
@@ -136,31 +148,37 @@ const Contact = () => {
         <button className={styles.submitBtn} type="submit">
           Send Now
         </button>
-        {formSubmitted && (
+        {/* {formSubmitted && (
           <p className={styles.thankyouMessage}>
             Thank you for contacting me! I'll get back to you as soon as
             possible.
           </p>
-        )}
+        )} */}
+      </div>
       </div>
     </form>
-
     <div className={styles.contactDetails}>
 
       <img src={Mail} alt={Mail} className={styles.mailIcon}></img> 
 
-          <h3>roanmacmillan@hotmail.com</h3>
+          <h4>roanmacmillan@hotmail.com</h4>
 
           <p>Send me a message and I will reach out as soon as possible.</p>
 
     </div>
+    </div>
 
-    <div className={styles.contactLink}>
+    
+
+    {/* <div className={styles.contactLink}>
         <div className={styles.contactLine}></div>
       <h3>See<br></br><strong>Portfolio</strong></h3>
       <Link to='/' className={styles.contactLink}>Portfolio</Link>
       <div className={styles.contactUnderline}></div>
-    </div>
+    </div> */}
+
+    <ContactLink h3Text="View" strongText="Portfolio" linkText="Portfolio"
+        linkTo="/" />
       
     </div>
   )

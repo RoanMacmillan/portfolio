@@ -96,16 +96,26 @@
     margin-top: 35px;
     background: black;
     color: white;
-    border: none;
+    /* border: none; */
     width: 150px;
     height: 45px;
     font-size: 15px;
     font-weight: 700;
     line-height: 1.4;
+    font-family: 'poppins', 'san-serif';
+    transition: all .3s ease;
+    border: 2px solid #fdfdfd;
+  }
+
+  .submitBtn:hover {
+    background: #fdfdfd;
+    cursor: pointer;
+    color: black;
+    border: 2px solid black;
   }
 
 
-  .contact h3 {
+  .contact h4 {
     font-size: 16px;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -147,4 +157,74 @@
   .contactLink a {
       text-decoration: none;
       
+  }
+
+
+  @media screen and (min-width: 800px) {
+    .contactContainer {
+      display: flex;
+      margin-top: 100px;
+      position: relative;
+    }
+
+    .contactDetails {
+      position: absolute;
+      bottom: 0;
+    }
+  
+    .contact h2 {
+      font-size: 26px;
+    }
+  
+    .contactText {
+      flex: 1;
+      margin-right: 20px;
+    }
+  
+    .contactText p {
+      width: 70%;
+    }
+  
+    form {
+      flex: 1;
+    }
+
+    .contactText, form, .contact h2 {
+      margin-top: 0;
+    }
+
+    .contact {
+      max-width: 1228px;
+      margin-lefT: auto;
+      margin-right: auto;
+    }
+
+    .contact br {
+      display: none;
+    }
+
+    .contactLink h3 {
+      display: flex;
+      gap: 10px;
+    }
+
+    .contact {
+      margin-top: 184px;
+    }
+
+  }
+
+
+  @media screen and (min-width: 1000px) {
+
+    .contact h1 {
+      font-size: 80px;
+    }
+
+
+
+    .contactLine {
+      margin-top: 165px;
+    }
+    
   }
