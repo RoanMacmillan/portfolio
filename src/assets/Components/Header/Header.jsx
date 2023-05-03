@@ -3,13 +3,9 @@ import styles from "./Header.module.css";
 import hamburger from "../../Images/hamburger.svg";
 import { Link, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer";
-import useInterSectionObserver from "../userInterSectionObserver/useInterSectionObserver";
+import close from "../../Images/icon-close.svg";
 
 const Header = () => {
-
-
- 
-
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -48,32 +44,53 @@ const Header = () => {
             src={hamburger}
             onClick={handleHamburgerClick}
           ></img>
-          {isMenuOpen && (
-            <div className={styles.mobileMenu}>
-                <div className={styles.mobileLinksContainer}>
-                    <Link to="/" onClick={handleLinkClick}>
-                      Portfolio
-                    </Link>
-                    <Link to="/about" onClick={handleLinkClick}>
-                      About me
-                    </Link>
-                    <Link to="/contact" onClick={handleLinkClick}>
-                      Contact
-                    </Link>
-                  </div>
-                  <div className={styles.mobileMenuFooter}>
-                    <div className={styles.linksContainer}>
-                      <p>Follow me</p>
 
-                      <Link>Github</Link>
-                      <Link>Linkedin</Link>
-                      <Link>Twitter</Link>
-                    </div>
-                  </div>
+          <div
+            className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}
+          >
+            <div className={styles.headerWrapper}>
+              <Link
+                className={styles.logoMobile}
+                to="/"
+                onClick={handleLinkClick}
+              >
+                rm
+              </Link>
 
-                
+              <img
+                className={styles.hamburger}
+                src={close}
+                onClick={handleHamburgerClick}
+              ></img>
             </div>
-          )}
+
+            <div
+              className={`${styles.mobileLinksContainer} ${
+                isMenuOpen ? styles.open : ""
+              }`}
+            >
+              <Link to="/" onClick={handleLinkClick}>
+                Portfolio
+              </Link>
+              <Link to="/about" onClick={handleLinkClick}>
+                About me
+              </Link>
+              <Link to="/contact" onClick={handleLinkClick}>
+                Contact
+              </Link>
+            </div>
+            <div className={styles.mobileMenuFooter}>
+              <div className={styles.linksContainer}>
+                <p>Follow me</p>
+
+                <Link>Github</Link>
+                <Link>Linkedin</Link>
+                <Link>Twitter</Link>
+              </div>
+              <p className={styles.date}>Portfolio / 2023</p>
+            </div>
+          </div>
+
           <div className={styles.desktopLinks}>
             <Link to="/">Portfolio</Link>
             <Link to="/about">About Me</Link>
