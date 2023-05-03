@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "thumbnail": "/assets/images/mobile/thumbnails/audio-thumb.png",
+    "label": "Frontend Development",
+    "title": "Audiophile",
+    "detailTitle": "Audio Phile",
+    "description": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system.",
+    "liveSite": "View live site",
+    "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
+    "detailStatic1": "/assets/images/mobile/detail/audio-main.png",
+    "background": "The project required implementing various UI components, including detailed product pages, shopping cart functionality, and a user-friendly checkout process. It highlights my ability to leverage modern web technologies such as React to create dynamic and responsive web applications."
+  },
+  {
+    "id": "2",
+    "thumbnail": "/assets/images/mobile/thumbnails/gallery-thumb.png",
+    "label": "Frontend Development",
+    "liveSite": "View live site",
+    "title": "Project 2",
+    "description": "Nullam tristique, sapien at lobortis ullamcorper, erat quam hendrerit tellus, ac consequat tortor lorem nec augue.",
+    "detailHero": "/assets/images/mobile/detail/hero-1.jpg"
+  },
+  {
+    "id": "3",
+    "thumbnail": "/assets/images/mobile/thumbnails/min-thumb.png",
+    "label": "Frontend Development",
+    "liveSite": "View live site",
+    "title": "Minimal Portfolio",
+    "description": "Suspendisse quis mauris vel orci fermentum hendrerit. Etiam quis lectus at dolor rutrum suscipit a et arcu.",
+    "detailHero": "/assets/images/mobile/detail/hero-1.jpg"
+  }
+]

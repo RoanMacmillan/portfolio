@@ -1,0 +1,25 @@
+.about {
+
+    margin-top: 120px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.me {
+    margin-bottom: 50px;
+}
+
+.headingLine {
+    height: 5px;
+    background: black;
+    width: 55px;
+    margin-top: 20px;
+  }
+
+  .about h2 {
+    margin-top: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }

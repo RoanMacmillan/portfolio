@@ -1,0 +1,76 @@
+.heroWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* filter: opacity(50%); */
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+
+.heroWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../../public/assets/images/mobile/detail/hero-1.jpg");
+    background-size: cover;
+    background-position: center;
+    /* filter: brightness(100%); */
+    filter: brightness(40%);
+
+  }
+
+.heroWrapper span,
+.heroWrapper h2 {
+    color: white;
+    z-index: 2;
+}
+
+
+.heroWrapper h2 {
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    font-size: 60px;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+
+}
+
+.heroWrapper span {
+    font-size: 16px;
+}
+
+.line {
+    height: 5px;
+    background: white;
+    width: 50px;
+    z-index: 9;
+}
+
+.portfolioDetailContent {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.portfolioDetailContent h3 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.description { 
+    max-width: 350px;
+    margin-bottom: 2rem;
+}
+
+.detailLinks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 5px;
+    margin-bottom: 4rem;
+}
+

@@ -1,0 +1,72 @@
+main {
+  padding: 1.5rem;
+  
+}
+
+h1 {
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-size: 60px;
+  text-transform: capitalize;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.textContainer {
+  margin-top: 160px;
+
+}
+
+.titleP {
+  margin-top: 20px;
+}
+
+.headingLine {
+  height: 5px;
+  background: black;
+  width: 55px;
+  margin-top: 20px;
+}
+
+
+@media screen and (min-width: 700px) {
+ 
+
+  .portfolioContainer {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  main {
+    max-width: 1228px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .row2 {
+    /* outline: 1px solid red; */
+    /* margin-top: -50px; */
+  }
+
+  .min {
+    /* margin-top: 0px !important; */
+  }
+ 
+}
+
+
+@media screen and (min-width: 1000px) {
+
+  .textContainer h1 {
+    font-size: 80px;
+  }
+
+  .secondBreak {
+    display: none;
+  }
+}

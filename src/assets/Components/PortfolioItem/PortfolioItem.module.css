@@ -1,0 +1,51 @@
+.portfolioItem {
+  margin-top: 100px;
+}
+
+.label {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.portfolioItem h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+}
+
+.liveSite {
+  text-decoration: underline;
+  font-weight: 600;
+  /* font-size: .9rem; */
+}
+
+
+@media screen and (min-width: 700px) {
+  
+
+ .portfolioItem p{
+
+  width: 100%;
+  max-widtH: 100%;
+  /* padding-right: 1.5rem; */
+  
+ }
+
+ .portfolioItem {
+  max-width: 500px;
+ }
+
+ 
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+  .portfolioItem h3 {
+    font-size: 32px;
+  }
+}

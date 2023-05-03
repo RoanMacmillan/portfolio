@@ -1,0 +1,244 @@
+.logo {
+  /* font-family: "DM Sans", sans-serif; */
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.headerNav {
+  display: flex;
+  gap: 31px;
+  /* display: none; */
+}
+
+.desktopLinks {
+  display: none;
+}
+
+.detailHeader .logo {
+  color: white;
+}
+
+.detailHeader .hamburger {
+  filter: brightness(0) invert(1);
+}
+
+.menuOpen {
+  background: rgb(20, 20, 20);
+}
+
+.menuOpen .logo {
+  color: white;
+}
+
+.menuOpen .hamburger {
+  filter: brightness(0) invert(1);
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: absolute;
+  background: rgb(20, 20, 20);
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* padding: 1.5rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto !important;
+}
+
+.mobileLinksContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-left: 1.5rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.menuOpen .mobileLinksContainer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileLinksContainer a {
+  color: rgb(177, 177, 177);
+  text-decoration: none;
+  font-size: 60px;
+  letter-spacing: -2px;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+.mobileMenuFooter {
+  padding-left: 1.5rem;
+  margin-bottom: 90px;
+}
+
+.mobileMenuFooter a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+.linksContainer {
+  /* margin-bottom: 90px; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  /* outline: 1px solid red; */
+  /* justify-content: space-between; */
+}
+
+.linksContainer p {
+  font-size: 1rem;
+}
+
+.menuRight {
+  display: none;
+}
+
+.menuLeft {
+  height: 100vh;
+  overflow-y: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+@media screen and (min-width: 700px) {
+  .headerWrapper {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobileLinksContainer {
+    max-width: 1228px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobileMenuFooter {
+    max-width: 1228px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobileLinksContainer a {
+    font-size: 80px;
+    line-height: 120px;
+    transition: all 0.3s ease;
+  }
+
+  .mobileLinksContainer a:hover {
+    color: white;
+  }
+
+  .linksContainer {
+    flex-direction: row;
+    align-items: center !important;
+    gap: 15px;
+  }
+
+  .linksContainer a {
+    font-size: 16px;
+    line-height: unset;
+  }
+
+  .menuLeft {
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .menuRight {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    /* max-width: 500px; */
+    margin-top: 250px;
+    /* position: absolute; */
+    display: unset;
+    /* top: 0; */
+    /* left: 150px; */
+    width: 50%;
+    display: none;
+  }
+
+  .menuRight a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .siteLine {
+    height: 3px;
+    background: white;
+    width: 80px;
+    margin-top: 0.3rem;
+  }
+
+  .menuRight p {
+    margin-bottom: 2rem;
+    width: 80%;
+  }
+
+  .menuLeft {
+    
+  }
+
+  .mobileContentWrapper {
+    /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 200px;
+  max-width: 1228px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; */
+  }
+}
