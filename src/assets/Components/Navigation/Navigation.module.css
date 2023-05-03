@@ -39,3 +39,18 @@
 .nextContainer {
   text-align: right;
 }
+
+
+@media screen and (min-width: 1000px) {
+
+.navigationLine {
+  margin-top: 10rem;
+}
+
+.navigation h3 {
+  display: flex;
+  gap: 10px;
+}
+
+
+}
