@@ -15,6 +15,18 @@ import useScrollToTopOnRefresh from "./assets/Components/useScrollToTopOnRefresh
 
 const AppContent = () => {
 
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
   
   // useScrollToTopOnRefresh();
 

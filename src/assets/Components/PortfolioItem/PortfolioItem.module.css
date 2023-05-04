@@ -1,5 +1,5 @@
 .portfolioItem {
-  margin-top: 75px;
+  margin-top: 50px;
 }
 
 .label {
@@ -42,6 +42,7 @@
 
  .portfolioItem {
   max-width: 500px;
+  margin-top: 75px;
  }
 
  

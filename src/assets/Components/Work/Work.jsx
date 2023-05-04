@@ -10,8 +10,8 @@ const Work = () => {
   const [textContainerRef, textContainerVisible] = useIntersectionObserver();
 
   const isLargeScreen = window.innerHeight >= 1035;
-
   const isLargerScreen = window.innerHeight >= 1345;
+  const isMobile = window.innerWidth < 700;
 
   return (
     <main>
@@ -33,6 +33,8 @@ const Work = () => {
       </div>
 
       <div className={styles.portfolioContainer}>
+
+
         <div className={styles.row}>
           <PortfolioItem
             key={portfolioData[0].id}
@@ -72,7 +74,7 @@ const Work = () => {
             liveSite={portfolioData[2].liveSite}
             className={styles.min}
             transitionDuration={0.7}
-            transitionDelay={1.25}
+            transitionDelay={isMobile ? 0 : 1.25}
           />
                     <div className={styles.itemLine}></div>
 
