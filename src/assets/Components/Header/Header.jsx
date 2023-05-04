@@ -19,7 +19,7 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  useEffect(() => {
+  useEffect(() => { 
     if (isMenuOpen) {
       document.body.classList.add(styles.noScroll);
     } else {

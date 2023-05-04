@@ -71,12 +71,30 @@ a:hover {
   cursor: pointer;
 }
 
+
+
 .fadeInLoad {
   opacity: 1;
   visibility: visible;
   transition:  all .7s ease-in-out;
   transform: translateY(0px);
 
+}
+
+.fadeInLoadDelay {
+
+  opacity: 1;
+  visibility: visible;
+  transition:  all .7s ease-in-out;
+  transform: translateY(0px);
+  transition-delay: .2s;
+}
+
+.fadeInLoadOpacity {
+  opacity: 1;
+  visibility: visible;
+  transition:  opacity .4s ease-in-out;
+  
 }
 
 .hidden {
@@ -101,4 +119,10 @@ a:hover {
   /* visibility: hidden; */
   /* transform: translateX(29px); */
 
+}
+
+
+.noScroll {
+  overflow: hidden;
+  height: 100%;
 }

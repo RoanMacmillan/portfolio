@@ -30,7 +30,7 @@ const PortfolioDetail = ({ portfolioData }) => {
   return (
     <div className={styles.portfolioDetail}>
       {/* <div className={styles.heroWrapper}> */}
-      <div ref={staticWrapperRef} className={`${styles.heroWrapper} ${staticWrapperVisible ? 'fadeInLoad' : 'hidden'}`}>
+      <div ref={staticWrapperRef} className={`${styles.heroWrapper} ${staticWrapperVisible ? 'fadeInLoadOpacity' : 'hidden'}`}>
 
         <span>{`0${item.id}-03`}</span>
         <h2 dangerouslySetInnerHTML={{ __html: detailTitle }}></h2>
@@ -41,7 +41,7 @@ const PortfolioDetail = ({ portfolioData }) => {
         </p>
       </div>
       <div className={styles.portfolioDetailContent}>
-        <div ref={staticWrapperRef} className={`${styles.staticWrapper} ${staticWrapperVisible ? 'fadeInLoad' : 'hidden'}`}>
+        <div ref={staticWrapperRef} className={`${styles.staticWrapper} ${staticWrapperVisible ? 'fadeInLoadDelay' : 'hidden'}`}>
 
           <img className={styles.staticImg} src={item.detailStatic1}></img>
         </div>
