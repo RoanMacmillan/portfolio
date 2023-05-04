@@ -1,40 +1,28 @@
-import React, {useEffect} from "react";
+// import React, {useEffect} from "react";
+import React, { useEffect, useContext } from "react"; // Import useContext
 import { useLocation } from "react-router-dom";
 import LoadingModal from "../LoadingModal/LoadingModal";
+import { LoadingContext } from "../../../App"; // Import the context
 
 const PageLoadingModal = () => {
   const location = useLocation();
-  const [showModal, setShowModal] = React.useState(false);
+  const { showLoading, setShowLoading } = useContext(LoadingContext); // Get the state and function from the context
 
-
-  
-
-
-  React.useEffect(() => {
-
+  useEffect(() => {
     const pathMatch = /^\/portfolio\/\d+$/.test(location.pathname);
 
     if (location.pathname === "/") {
-      setShowModal(true);
+      setShowLoading(true);
       // Simulate loading time
       setTimeout(() => {
-        setShowModal(false);
-      },    1250);
+        setShowLoading(false);
+      }, 1250);
     } else {
-      setShowModal(false);
+      setShowLoading(false);
     }
-  }, [location.pathname]);
+  }, [location.pathname, setShowLoading]);
 
-
-  useEffect(() => {
-    if (showModal) {
-      document.body.classList.add("noScroll");
-    } else {
-      document.body.classList.remove("noScroll");
-    }
-  }, [showModal]);
-
-  return <LoadingModal show={showModal} />;
+  return <LoadingModal show={showLoading} />;
 };
 
 export default PageLoadingModal;
