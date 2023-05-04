@@ -34,7 +34,7 @@ const About = () => {
       <div className={styles.linkLine}></div> */}
         </div>
         <div className={`${styles.meWrapper} ${styles.meWrapperDesktop}`}>
-          <img className={styles.me} src={Me} alt={Me}></img>
+          {/* <img className={styles.me} src={Me} alt={Me}></img> */}
         </div>
       </div>
 

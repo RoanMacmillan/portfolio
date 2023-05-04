@@ -32,9 +32,20 @@ strong {
   margin-top: 20px;
 }
 
+.itemLine {
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.13);
+  margin-top: 60px;
+}
+
 
 @media screen and (min-width: 700px) {
  
+
+  .itemLine {
+    display: none;
+  }
 
   .portfolioContainer {
     display: flex;
@@ -76,5 +87,26 @@ strong {
     display: none;
   }
 
+
+  .row2 {
+    
+    /* margin-top: 100px; */
+    margin-top: -180px;
+  }
+
+  .min {
+    margin-top: 0 !important;
+  }
+
+  /* .contentTransition {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .contentTransition.show {
+    opacity: 1 !important;
+    transform: translateY(0);
+  } */
  
 }

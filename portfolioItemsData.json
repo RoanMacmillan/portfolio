@@ -18,19 +18,33 @@
   {
     "id": "2",
     "thumbnail": "/assets/images/mobile/thumbnails/gallery-thumb.png",
-    "label": "03-04",
+    "label": "02-04",
     "liveSite": "View live site",
-    "title": "Project 2",
+    "title": "Galleria",
     "description": "Nullam tristique, sapien at lobortis ullamcorper, erat quam hendrerit tellus, ac consequat tortor lorem nec augue.",
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg"
   },
   {
     "id": "3",
     "thumbnail": "/assets/images/mobile/thumbnails/min-thumb.png",
-    "label": "02-04",
+    "label": "03-04",
     "liveSite": "View live site",
-    "title": "Minimal Portfolio",
+    "title": "Minimal",
+    "description": "Suspendisse quis mauris vel orci fermentum hendrerit. Etiam quis lectus at dolor rutrum suscipit a et arcu.",
+    "detailHero": "/assets/images/mobile/detail/hero-1.jpg"
+  },
+
+
+  {
+    "id": "4",
+    "thumbnail": "/assets/images/mobile/thumbnails/insure-thumb.jpg",
+    "label": "04-04",
+    "liveSite": "View live site",
+    "title": "Insure",
     "description": "Suspendisse quis mauris vel orci fermentum hendrerit. Etiam quis lectus at dolor rutrum suscipit a et arcu.",
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg"
   }
+
+
+
 ]

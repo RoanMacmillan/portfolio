@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Work.module.css";
 import arrowDown from "../../Images/arrow-down.svg";
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
-import portfolioData from '../../../../portfolioItemsData.json';
+import portfolioData from "../../../../portfolioItemsData.json";
 import ContactLink from "../ContactLink/ContactLink";
 
 const Work = () => {
+
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [showContent, setShowContent] = useState(false);
+
+
+  const handleImageLoad = () => {
+    setImagesLoaded(true);
+    setTimeout(() => {
+      setShowContent(true);
+    }, 500); // 500ms delay, adjust according to the modal transition duration
+  };
+
   return (
+    <div
+  className={`${styles.contentTransition} ${showContent ? styles.show : ""}`}
+>
     <main>
       <div className={styles.textContainer}>
         <h1>
-          check<br></br> <strong>my</strong> 
+          check<br></br> <strong>my</strong>
           <br className={styles.secondBreak}></br> portfolio
         </h1>
         <div className={styles.headingLine}></div>
         <p className={styles.titleP}>
-          An aspiring frontend developer<br></br> who loves to build<br></br> visually appealing
-          sites
+          An aspiring frontend developer<br></br> who loves to build<br></br>{" "}
+          visually appealing sites
         </p>
       </div>
 
@@ -31,6 +46,8 @@ const Work = () => {
             description={portfolioData[0].description}
             liveSite={portfolioData[0].liveSite}
           />
+          <div className={styles.itemLine}></div>
+
           <PortfolioItem
             key={portfolioData[1].id}
             id={portfolioData[1].id}
@@ -40,6 +57,8 @@ const Work = () => {
             description={portfolioData[1].description}
             liveSite={portfolioData[1].liveSite}
           />
+
+          <div className={styles.itemLine}></div>
         </div>
         <div className={styles.row2}>
           <PortfolioItem
@@ -52,7 +71,7 @@ const Work = () => {
             liveSite={portfolioData[2].liveSite}
             className={styles.min}
           />
-          {/* <PortfolioItem
+          <PortfolioItem
             key={portfolioData[3].id}
             id={portfolioData[3].id}
             thumbnail={portfolioData[3].thumbnail}
@@ -60,11 +79,17 @@ const Work = () => {
             title={portfolioData[3].title}
             description={portfolioData[3].description} 
             liveSite={portfolioData[3].liveSite}
-          /> */}
+          />
         </div>
       </div>
-      <ContactLink h3Text="Let's" strongText="Talk" linkText="Contact" linkTo="/contact" />
+      <ContactLink
+        h3Text="Let's"
+        strongText="Talk"
+        linkText="Contact"
+        linkTo="/contact"
+      />
     </main>
+    </div>
   );
 };
 

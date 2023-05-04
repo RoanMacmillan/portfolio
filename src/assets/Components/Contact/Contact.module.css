@@ -104,14 +104,15 @@
     line-height: 1.4;
     font-family: 'poppins', 'san-serif';
     transition: all .3s ease;
-    border: 2px solid #fdfdfd;
+    /* border: 2px solid #fdfdfd; */
+    border: 2px solid black;
+
   }
 
   .submitBtn:hover {
     background: #fdfdfd;
     cursor: pointer;
     color: black;
-    border: 2px solid black;
   }
 
 

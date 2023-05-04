@@ -26,6 +26,9 @@
 }
 
 
+
+
+
 @media screen and (min-width: 700px) {
   
 
@@ -51,4 +54,17 @@
   .portfolioItem h3 {
     font-size: 32px;
   }
+
+  .imageWrapper img {
+    transition: transform 1s ease;
+  }
+
+  .imageWrapper {
+    overflow: hidden;
+  }
+
+  .imageWrapper img:hover  {
+    transform: scale(105%);
+  }
+
 }

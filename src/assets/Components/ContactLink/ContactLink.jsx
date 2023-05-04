@@ -9,8 +9,17 @@ import useInterSectionObserver from '../../Components/userInterSectionObserver/u
 const ContactLink = ({ h3Text, strongText, linkText, linkTo }) => {
 
 
-  const [scrollBtnRef, scrollBtnVisible] = useInterSectionObserver({}, true);
-  const [contactWrapperRef, contactWrapperVisible] = useInterSectionObserver({}, true);
+  const [scrollBtnRef, scrollBtnVisible] = useInterSectionObserver();
+  const [contactWrapperRef, contactWrapperVisible] = useInterSectionObserver();
+
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
 
 
   return (
@@ -33,7 +42,7 @@ const ContactLink = ({ h3Text, strongText, linkText, linkTo }) => {
       </div>
       {/* <div className={styles.scrollBtn}> */}
 
-        <div ref={scrollBtnRef} className={`${styles.scrollBtn} ${scrollBtnVisible ? 'fadeInRight' : 'hiddenRight'}`}>
+      <div ref={scrollBtnRef} className={`${styles.scrollBtn} ${scrollBtnVisible ? 'fadeInRight' : 'hiddenRight'}`} onClick={scrollToTop}>
 
       <p className={styles.scrollBtnText}>Scroll to top</p>
       <img src={arrowUp} alt={arrowUp} className={styles.arrowUp} ></img>
