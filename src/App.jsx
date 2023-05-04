@@ -13,20 +13,8 @@ import ScrollToTop from './assets/Components/ScrollToTop/ScrollToTop';
 import PageLoadingModal from "./assets/Components/PageLoadingModal/PageLoadingModal";
 
 const AppContent = () => {
-  // const location = useLocation();
-  // const [showModal, setShowModal] = React.useState(false);
 
-  // React.useEffect(() => {
-  //   if (location.pathname === "/") {
-  //     setShowModal(true);
-  //     // Simulate loading time
-  //     setTimeout(() => {
-  //       setShowModal(false);
-  //     }, 2000);
-  //   } else {
-  //     setShowModal(false);
-  //   }
-  // }, [location.pathname]);
+  
 
   return (
     <>

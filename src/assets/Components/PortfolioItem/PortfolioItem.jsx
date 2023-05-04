@@ -20,9 +20,9 @@ const PortfolioItem = ({ id, liveSite, label, thumbnail, title, description, cla
       <p className={styles.label}>{label}</p>
       <h3>{title}</h3>
       <p className={styles.description}>{description}</p>
-      <Link to='/'>
+      {/* <Link to='/'>
       <span className={styles.liveSite}>{liveSite}</span>
-      </Link>
+      </Link> */}
 
 
     </div>

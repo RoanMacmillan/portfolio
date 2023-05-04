@@ -22,7 +22,7 @@
     margin-top: 5px;
     transition: all .3s ease;
     cursor: pointer;
-    position: relative;
+    position: relative; 
 }
 
 .loadingLine {

@@ -7,12 +7,12 @@ const PageLoadingModal = () => {
   const [showModal, setShowModal] = React.useState(false);
 
   React.useEffect(() => {
-    if (location.pathname === "/") {
+    if (location.pathname === "/" || location.pathname === "/portfolio/1") {
       setShowModal(true);
       // Simulate loading time
       setTimeout(() => {
         setShowModal(false);
-      }, 2000);
+      }, 1000);
     } else {
       setShowModal(false);
     }

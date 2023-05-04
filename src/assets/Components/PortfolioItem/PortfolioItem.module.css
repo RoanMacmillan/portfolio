@@ -1,5 +1,5 @@
 .portfolioItem {
-  margin-top: 100px;
+  margin-top: 75px;
 }
 
 .label {
@@ -65,6 +65,10 @@
 
   .imageWrapper img:hover  {
     transform: scale(105%);
+  }
+
+  .portfolioItem {
+    margin-bottom: 100px;
   }
 
 }

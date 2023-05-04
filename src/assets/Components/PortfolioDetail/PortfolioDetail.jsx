@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import ContactLink from "../ContactLink/ContactLink";
 import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
+import LinkBtn from "../Link/LinkBtn";
 
 const PortfolioDetail = ({ portfolioData }) => {
   // extracts id parameter to fetch details for corresponding portfolio item
@@ -28,7 +29,9 @@ const PortfolioDetail = ({ portfolioData }) => {
 
   return (
     <div className={styles.portfolioDetail}>
-      <div className={styles.heroWrapper}>
+      {/* <div className={styles.heroWrapper}> */}
+      <div ref={staticWrapperRef} className={`${styles.heroWrapper} ${staticWrapperVisible ? 'fadeInLoad' : 'hidden'}`}>
+
         <span>{`0${item.id}-03`}</span>
         <h2 dangerouslySetInnerHTML={{ __html: detailTitle }}></h2>
         <div className={styles.line}></div>
@@ -52,14 +55,19 @@ const PortfolioDetail = ({ portfolioData }) => {
           <div className={styles.test2}>
             <p className={styles.background}>{item.background}</p>
             <div className={styles.detailLinks}>
-              <div>
+              {/* <div>
                 <Link>Visit Live site</Link>
                 <div className={styles.linkLine}></div>
-              </div>
-              <div>
+              </div> */}
+
+              <LinkBtn linkTo='/' linkContent='View Demo' />
+              <LinkBtn linkTo='/' linkContent='View Code' />
+
+
+              {/* <div>
                 <Link>View code</Link>
                 <div className={styles.linkLine}></div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

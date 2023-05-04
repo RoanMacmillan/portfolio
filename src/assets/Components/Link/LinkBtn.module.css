@@ -1,0 +1,39 @@
+.linkUnderline {
+    height: 2px;
+    width: 110px;
+    background: rgba(0, 0, 0, 0.13);
+    margin-top: 5px;
+    transition: all .3s ease;
+    cursor: pointer;
+    position: relative; 
+}
+
+
+.loadingLine {
+    height: 2px;
+    position: absolute;
+    background: black;
+    width: 0%;
+    
+    transition: width .3s ease-in-out;
+}
+
+
+.linkBtn:hover .loadingLine
+     {
+        width: 100%;
+    }
+
+
+    .linkBtn {
+        position: relative;
+    }
+
+    .linkArrow {
+        position: absolute;
+        width: 16px;
+        top: 1px;
+        right: -1px;
+        transform: rotate(45deg);
+        font-weight: 600;
+    }
