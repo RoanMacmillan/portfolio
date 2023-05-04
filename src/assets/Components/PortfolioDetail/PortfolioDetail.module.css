@@ -5,7 +5,7 @@
     /* filter: opacity(50%); */
     position: relative;
     /* padding-left: 1.5rem; */
-    margin-top: 200px;
+    margin-top: 125px;
     
 }
 
@@ -126,10 +126,26 @@
     margin-top: 40px;
 }
 
+@media screen and (min-width: 700px) {
+    .heroWrapper {
+        margin-top: 150px;
+
+    }
+
+
+
+}
+
+
 @media screen and (min-width: 1000px) {
 
     .portfolioDetail br {
         display: none;
+    }
+
+    .heroWrapper {
+        margin-top: 200px;
+
     }
 
     .portfolioDetail h2 {

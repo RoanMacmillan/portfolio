@@ -19,6 +19,8 @@
   .modalOverlay.show {
     opacity: 1;
     visibility: visible;
+    min-height: 100vh;
+
   }
   
   .modal p {

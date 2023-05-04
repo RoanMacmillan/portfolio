@@ -19,7 +19,7 @@ const PageLoadingModal = () => {
       // Simulate loading time
       setTimeout(() => {
         setShowModal(false);
-      }, 1250);
+      },    1250);
     } else {
       setShowModal(false);
     }

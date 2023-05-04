@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./assets/Components/Header/Header";
@@ -11,15 +11,18 @@ import Contact from "./assets/Components/Contact/Contact";
 import LoadingModal from "./assets/Components/LoadingModal/LoadingModal";
 import ScrollToTop from './assets/Components/ScrollToTop/ScrollToTop';
 import PageLoadingModal from "./assets/Components/PageLoadingModal/PageLoadingModal";
+import useScrollToTopOnRefresh from "./assets/Components/useScrollToTopOnRefresh/useScrollToTopOnRefresh";
 
 const AppContent = () => {
 
   
+  // useScrollToTopOnRefresh();
 
   return (
     <>
       <Header />
       <PageLoadingModal />
+      
       <ScrollToTop />
       {/* <LoadingModal show={showModal} /> */}
       <Routes>
@@ -40,6 +43,8 @@ const AppContent = () => {
 };
 
 function App() {
+
+  
   return (
     <div>
       <BrowserRouter>

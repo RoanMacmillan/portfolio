@@ -74,6 +74,8 @@ const Work = () => {
             transitionDuration={0.7}
             transitionDelay={1.25}
           />
+                    <div className={styles.itemLine}></div>
+
           <PortfolioItem
             key={portfolioData[3].id}
             id={portfolioData[3].id}
