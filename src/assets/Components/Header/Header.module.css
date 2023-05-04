@@ -190,17 +190,7 @@ header {
   font-size: 1rem;
 }
 
-.menuRight {
-  display: none;
-}
 
-.menuLeft {
-  height: 100vh;
-  overflow-y: auto !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .mobileMenu .headerWrapper {
   padding-left: 1.5rem;
   padding-right: 1.5rem;

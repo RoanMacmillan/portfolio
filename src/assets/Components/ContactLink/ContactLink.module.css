@@ -8,129 +8,104 @@
 }
 
 .contactLine {
-    height: 1px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.13);
-    margin-top: 60px;
-    margin-bottom: 60px;
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.13);
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .contactUnderline {
-    height: 2px;
-    width: 80px;
-    background: rgba(0, 0, 0, 0.13);
-    margin-top: 5px;
-    transition: all .3s ease;
-    cursor: pointer;
-    position: relative; 
+  height: 2px;
+  width: 80px;
+  background: rgba(0, 0, 0, 0.13);
+  margin-top: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
 .loadingLine {
-    height: 2px;
-    position: absolute;
-    background: #5fb4a2;
-    width: 0%;
-    transition: width .3s ease-in-out;
+  height: 2px;
+  position: absolute;
+  background: #5fb4a2;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
 }
 
-.cLinkContainer:hover .loadingLine
-     {
-        width: 100%;
-    }
-
+.cLinkContainer:hover .loadingLine {
+  width: 100%;
+}
 
 .contactLink a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
 }
 
 .cLinkContainer {
-    width: 80px;
-    cursor: pointer;
+  width: 80px;
+  cursor: pointer;
 }
 
 .contactLink {
-    /* outline: 1px solid red; */
-    position: relative;
-    /* overflow: hidden; */
-    padding-bottom: 150px;
-    /* padding-left: 1.5rem; */
-    
-        /* padding-right: 1.5rem; */
-
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 150px;
 }
 
 .scrollBtn {
-    position: absolute;
-    bottom: 0px;
-    /* top: 100px; */
-    right: -28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+  right: -28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  cursor: pointer;
 }
 
 .scrollBtn:hover .arrowUp {
-
-    /* transform: scale(120%); */
-    transform: rotate(180deg) scale(120%);
-
+  transform: rotate(180deg) scale(120%);
 }
 
 .scrollBtnText {
-    transform: rotate(90deg);
-    color: black;
-    font-weight: 600;
-    font-size: .9rem;
+  transform: rotate(90deg);
+  color: black;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .arrowUp {
-    width: 32px;
-    transform: rotate(180deg);
-    transition: transform .4s ease;
-
+  width: 32px;
+  transform: rotate(180deg);
+  transition: transform 0.4s ease;
 }
 
-.contactWrapper {
-    /* outline: 1px solid red; */
-    
-}
 
 @media screen and (min-width: 1000px) {
+  .contactLink h3 {
+    font-size: 60px;
+    display: flex;
+    gap: 10px;
+  }
 
-    .contactLink h3 {
-        font-size: 60px;
-        display: flex;
-        gap: 10px;
-    }
+  .contactLink br {
+    display: none;
+  }
 
-    .contactLink br {
-        display: none;
-    }
+  .contactLink {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    
-    .contactLink {
+  .scrollBtn {
+    bottom: 50px;
+  }
 
-        max-width: 1180px;
-        margin-left: auto;
-        margin-right: auto;
-        
-
-    }
-
-    .scrollBtn {
-
-        bottom: 50px;
-    }
-    
-
-    .contactLine {
-        
-        margin-top: 165px;
-        margin-bottom: 80px;
-    }
+  .contactLine {
+    margin-top: 165px;
+    margin-bottom: 80px;
+  }
 }
