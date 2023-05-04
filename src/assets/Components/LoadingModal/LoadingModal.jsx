@@ -6,8 +6,13 @@ const LoadingModal = ({ show }) => {
     <div
       className={`${styles.modalOverlay} ${show ? styles.show : ""}`}
     >
+
+      {/* <div className={styles.emptyBar}></div> */}
+
+<div className={`${styles.loadingBar} ${show ? styles.loading : ""}`}></div>
+
       <div className={`${styles.modal} ${show ? styles.show : ""}`}>
-        <p>Loading...</p>
+        <p>Roan Macmillan</p>
       </div>
     </div>
   );

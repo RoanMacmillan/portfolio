@@ -4,26 +4,23 @@ import arrowDown from "../../Images/arrow-down.svg";
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
 import portfolioData from "../../../../portfolioItemsData.json";
 import ContactLink from "../ContactLink/ContactLink";
+import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
 
 const Work = () => {
+  const [textContainerRef, textContainerVisible] = useIntersectionObserver();
 
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [showContent, setShowContent] = useState(false);
+  const isLargeScreen = window.innerHeight >= 1035;
 
-
-  const handleImageLoad = () => {
-    setImagesLoaded(true);
-    setTimeout(() => {
-      setShowContent(true);
-    }, 500); // 500ms delay, adjust according to the modal transition duration
-  };
+  const isLargerScreen = window.innerHeight >= 1345;
 
   return (
-    <div
-  className={`${styles.contentTransition} ${showContent ? styles.show : ""}`}
->
     <main>
-      <div className={styles.textContainer}>
+      <div
+        ref={textContainerRef}
+        className={`${styles.textContainer} ${
+          textContainerVisible ? "fadeInLoad" : "hidden"
+        } `}
+      >
         <h1>
           check<br></br> <strong>my</strong>
           <br className={styles.secondBreak}></br> portfolio
@@ -45,6 +42,8 @@ const Work = () => {
             title={portfolioData[0].title}
             description={portfolioData[0].description}
             liveSite={portfolioData[0].liveSite}
+            transitionDuration={0.7}
+            transitionDelay={1.25}
           />
           <div className={styles.itemLine}></div>
 
@@ -56,6 +55,8 @@ const Work = () => {
             title={portfolioData[1].title}
             description={portfolioData[1].description}
             liveSite={portfolioData[1].liveSite}
+            transitionDelay={isLargerScreen ? 1.25 : 0}
+            transitionDuration={0.7}
           />
 
           <div className={styles.itemLine}></div>
@@ -70,6 +71,8 @@ const Work = () => {
             description={portfolioData[2].description}
             liveSite={portfolioData[2].liveSite}
             className={styles.min}
+            transitionDuration={0.7}
+            transitionDelay={1.25}
           />
           <PortfolioItem
             key={portfolioData[3].id}
@@ -77,8 +80,12 @@ const Work = () => {
             thumbnail={portfolioData[3].thumbnail}
             label={portfolioData[3].label}
             title={portfolioData[3].title}
-            description={portfolioData[3].description} 
+            description={portfolioData[3].description}
             liveSite={portfolioData[3].liveSite}
+            transitionDelay={isLargeScreen ? 1.25 : 0}
+            transitionDuration={0.7}
+
+
           />
         </div>
       </div>
@@ -89,7 +96,6 @@ const Work = () => {
         linkTo="/contact"
       />
     </main>
-    </div>
   );
 };
 
