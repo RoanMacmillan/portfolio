@@ -1,4 +1,4 @@
-import React, {useEffect, useState, createContext} from "react";
+import React, {useEffect, useState} from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./assets/Components/Header/Header";
@@ -13,35 +13,17 @@ import ScrollToTop from './assets/Components/ScrollToTop/ScrollToTop';
 import PageLoadingModal from "./assets/Components/PageLoadingModal/PageLoadingModal";
 import useScrollToTopOnRefresh from "./assets/Components/useScrollToTopOnRefresh/useScrollToTopOnRefresh";
 
-export const LoadingContext = createContext(); // Create the context
 
 const AppContent = () => {
 
-  const [showLoading, setShowLoading] = useState(false); // Add a new state for managing loading modal
 
 
-  useEffect(() => {
-    const handlePopState = () => {
-      setShowLoading(true);
-      window.scrollTo(0, 0);
-      setTimeout(() => {
-        setShowLoading(false);
-      }, 1250);
-    };
-
-    window.addEventListener("popstate", handlePopState);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
-  }, []);
 
   
   // useScrollToTopOnRefresh();
 
   return (
     <>
-    <LoadingContext.Provider value={{ showLoading, setShowLoading }}>
       <Header />
       <PageLoadingModal />
       
@@ -60,7 +42,6 @@ const AppContent = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-      </LoadingContext.Provider>
     </>
   );
 };

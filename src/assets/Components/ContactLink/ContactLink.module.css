@@ -65,9 +65,7 @@
   cursor: pointer;
 }
 
-.scrollBtn:hover .arrowUp {
-  transform: rotate(180deg) scale(120%);
-}
+
 
 .scrollBtnText {
   transform: rotate(90deg);
@@ -102,6 +100,10 @@
 
   .scrollBtn {
     bottom: 50px;
+  }
+
+  .scrollBtn:hover .arrowUp {
+    transform: rotate(180deg) scale(112%);
   }
 
   .contactLine {

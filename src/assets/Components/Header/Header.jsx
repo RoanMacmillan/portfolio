@@ -1,23 +1,40 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import hamburger from "../../Images/hamburger.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import close from "../../Images/icon-close.svg";
+import PageLoadingModal from "../PageLoadingModal/PageLoadingModal";
+import CustomLink from "../CustomLink/CustomLink";
 
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const [showLoadingModal, setShowLoadingModal] = useState(false);
 
   const isDetailPage = location.pathname.includes("/portfolio/");
+
+
 
   const handleHamburgerClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleLinkClick = () => {
-    setIsMenuOpen(false);
+  const handleLinkClick = (linkTo) => {
+    if (linkTo === "/") {
+      if (location.pathname !== "/") {
+        setTimeout(() => {
+          setIsMenuOpen(false);
+        }, 525); // Adjust the delay as needed
+      } else {
+        setIsMenuOpen(false);
+      }
+    } else {
+      setIsMenuOpen(false);
+    }
   };
+  
 
   useEffect(() => { 
     if (isMenuOpen) {
@@ -28,15 +45,24 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
+    <>
     <header
       className={`${isDetailPage ? styles.detailHeader : ""} ${
         isMenuOpen ? styles.menuOpen : ""
       }`}
     >
       <div className={styles.headerWrapper}>
-        <Link className={styles.logo} to="/" onClick={handleLinkClick}>
-          rm
-        </Link>
+        
+
+        <CustomLink
+            className={styles.logo}
+            to="/"
+            // showModal={showLoadingModal}
+            setShowModal={setShowLoadingModal}
+            handleLinkClick={handleLinkClick}
+          >
+            rm
+          </CustomLink>
 
         <nav className={styles.headerNav}>
           <img
@@ -49,13 +75,17 @@ const Header = () => {
             className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}
           >
             <div className={styles.headerWrapper}>
-              <Link
-                className={styles.logoMobile}
-                to="/"
-                onClick={handleLinkClick}
-              >
-                rm
-              </Link>
+              
+
+              <CustomLink
+            className={styles.logoMobile}
+            to="/"
+            // showModal={showLoadingModal}
+            setShowModal={setShowLoadingModal}
+            handleLinkClick={handleLinkClick}
+          >
+            rm
+          </CustomLink>
 
               <img
                 className={styles.hamburger}
@@ -69,9 +99,15 @@ const Header = () => {
                 isMenuOpen ? styles.open : ""
               }`}
             >
-              <Link to="/" onClick={handleLinkClick}>
-                Portfolio
-              </Link>
+              <CustomLink
+            // className={styles.logoMobile}
+            to="/"
+            // showModal={showLoadingModal}
+            setShowModal={setShowLoadingModal}
+            handleLinkClick={handleLinkClick}
+          >
+            Portfolio
+          </CustomLink>
               <Link to="/about" onClick={handleLinkClick}>
                 About me
               </Link>
@@ -99,6 +135,10 @@ const Header = () => {
         </nav>
       </div>
     </header>
+
+<PageLoadingModal showModal={showLoadingModal} />
+
+</>
   );
 };
 

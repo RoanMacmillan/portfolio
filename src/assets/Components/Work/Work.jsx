@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Work.module.css";
 import arrowDown from "../../Images/arrow-down.svg";
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
@@ -12,6 +12,9 @@ const Work = () => {
   const isLargeScreen = window.innerHeight >= 1035;
   const isLargerScreen = window.innerHeight >= 1345;
   const isMobile = window.innerWidth < 700;
+
+
+ 
 
   return (
     <main>
@@ -44,8 +47,9 @@ const Work = () => {
             title={portfolioData[0].title}
             description={portfolioData[0].description}
             liveSite={portfolioData[0].liveSite}
-            transitionDuration={0.7}
-            transitionDelay={1.25}
+            
+            // transitionDuration={0.7}
+            // transitionDelay={1.25}
           />
           <div className={styles.itemLine}></div>
 
@@ -57,8 +61,8 @@ const Work = () => {
             title={portfolioData[1].title}
             description={portfolioData[1].description}
             liveSite={portfolioData[1].liveSite}
-            transitionDelay={isLargerScreen ? 1.25 : 0}
-            transitionDuration={0.7}
+            // transitionDelay={isLargerScreen ? 1.25 : 0}
+            // transitionDuration={0.7}
           />
 
           <div className={styles.itemLine}></div>
@@ -73,8 +77,8 @@ const Work = () => {
             description={portfolioData[2].description}
             liveSite={portfolioData[2].liveSite}
             className={styles.min}
-            transitionDuration={0.7}
-            transitionDelay={isMobile ? 0 : 1.25}
+            // transitionDuration={0.7}
+            // transitionDelay={isMobile ? 0 : 1.25}
           />
                     <div className={styles.itemLine}></div>
 
@@ -86,8 +90,8 @@ const Work = () => {
             title={portfolioData[3].title}
             description={portfolioData[3].description}
             liveSite={portfolioData[3].liveSite}
-            transitionDelay={isLargeScreen ? 1.25 : 0}
-            transitionDuration={0.7}
+            // transitionDelay={isLargeScreen ? 1.25 : 0}
+            // transitionDuration={0.7}
 
 
           />
