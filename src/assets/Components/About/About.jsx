@@ -93,7 +93,7 @@ const About = () => {
       <div className={styles.iconWrapper}>
 
       
-      <img src={cssLogo} alt={jsLogo}></img>
+      {/* <img src={cssLogo} alt={cssLogo}></img> */}
 
       </div>
       <span>CSS 3</span>
