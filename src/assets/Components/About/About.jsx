@@ -5,7 +5,7 @@ import ContactLink from "../ContactLink/ContactLink";
 import jsLogo from '../../Images/java-script-logo.png'
 import reactLogo from '../../Images/react.png';
 import htmlLogo from '../../Images/html-5-logotype.png'
-import cssLogo from '../../images/css-3.png';
+// import cssLogo from '../../images/css-3.png';
 import LinkBtn from "../Link/LinkBtn";
 import iconCode from '../../Images/icon-code.svg';
 import services from '../../images/services.svg'
