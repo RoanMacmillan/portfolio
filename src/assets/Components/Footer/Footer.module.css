@@ -3,9 +3,27 @@ footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    
+    
 }
 
+.year {
+  margin-top: auto;
+  display: none;
+}
 
+.attribution {
+  font-size: .9rem;
+  line-height: 1.2rem;
+
+}
+
+.attributionWrapper {
+  display: flex;
+  flex-direction: column;
+}
 
 .footerNav {
     /* padding-top: 130px; */
@@ -17,8 +35,12 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1px;
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
     margin-bottom: 1.5rem;
+}
+
+.linksContainer p {
+  margin-bottom: 1.5rem;
 }
 
 .linksContainer a {
@@ -29,28 +51,59 @@ footer {
 }
 
 
+
+
 @media screen and (min-width: 700px) {
 
 
     .linksContainer {
         flex-direction: row;
         align-items: center !important;
-        gap: 15px;
-        margin-right: auto;
-        margin-left: 15px;
+        gap: 8px;
+        /* margin-right: auto; */
+        /* margin-left: 15px; */
+        margin-bottom: 0;
+      }
+
+      .linksContainer p {
+        margin-bottom: 0;
+      }
+
+      .footerNav {
+        
       }
     
-      .footerNav {
-        flex-direction: row;
-        align-items: center;
+      footer {
+        /* flex-direction: row; */
+        /* align-items: center; */
         justify-content: space-between;
-        max-width: 1180px;
+        max-width: 1228px;
         margin-right: auto;
         margin-left: auto;
+        /* margin-bottom: 40px; */
       }
 
       .linksContainer a {
-        font-size: 16px;
+        font-size: 14px;
         line-height: unset;
+        transition: color .2s ease;
+      }
+
+      .linksContainer a:hover {
+
+        color: #5fb4a2;
+      }
+
+      .attribution {
+        font-size: 14px;
+      }
+
+      .year {
+        display: unset;
+      }
+
+      .attributionWrapper {
+        flex-direction: row;
+        gap: 5px;
       }
 }

@@ -60,8 +60,9 @@ const PortfolioDetail = ({ portfolioData }) => {
                 <div className={styles.linkLine}></div>
               </div> */}
 
-              <LinkBtn linkTo='/' linkContent='View Demo' />
-              <LinkBtn linkTo='/' linkContent='View Code' />
+<LinkBtn linkToPage={item.demoURL} linkContent='View Demo' />
+<LinkBtn linkToPage={item.codeURL} linkContent='View Code' />
+
 
 
               {/* <div>

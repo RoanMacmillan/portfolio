@@ -7,7 +7,7 @@ import CustomLink from '../../Components/CustomLink/CustomLink'
 import PageLoadingModal from '../../Components/PageLoadingModal/PageLoadingModal'
 
 
-const ContactLink = ({ h3Text, strongText, linkText, linkTo }) => {
+const ContactLink = ({ h3Text, strongText, linkText, linkTo, hideContactLine }) => {
 
 
   const [scrollBtnRef, scrollBtnVisible] = useInterSectionObserver();
@@ -34,7 +34,7 @@ const ContactLink = ({ h3Text, strongText, linkText, linkTo }) => {
   return (
     <>
     <div className={styles.contactLink}>
-      <div className={styles.contactLine}></div>
+      <div className={`${styles.contactLine} ${hideContactLine ? styles.hide : ''}`}></div>
       <div ref={contactWrapperRef} className={`${styles.contactWrapper} ${contactWrapperVisible ? 'fadeInLoad' : 'hidden'}`}>
 
       <h3>
