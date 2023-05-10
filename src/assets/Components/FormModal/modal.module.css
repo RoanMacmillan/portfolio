@@ -1,0 +1,83 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modalContent h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modalContent p {
+  max-width: 250px;
+}
+
+.modalCloseButton {
+  margin-top: 35px;
+  background: black;
+  color: white;
+  width: 150px;
+  height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: "poppins", "san-serif";
+  transition: all 0.3s ease;
+  border: 2px solid black;
+}
+
+.modalCloseButton:hover {
+  background: #fdfdfd;
+  cursor: pointer;
+  color: black;
+}
+
+.check {
+  filter: invert(75%) sepia(6%) saturate(2634%) hue-rotate(117deg)
+    brightness(85%) contrast(87%);
+  width: 75px;
+}
+
+.modalVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 1000px) {
+  .check {
+    width: 100px;
+  }
+
+  .modalContent h2 {
+    font-size: 2rem;
+  }
+
+  .modalContent {
+    max-width: 400px;
+    padding: 3rem;
+  }
+}

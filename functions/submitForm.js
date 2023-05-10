@@ -72,7 +72,7 @@ exports.handler = async function (event, context) {
 
   try {
     console.log('Sending email:', mailOptions); // Add this line
-    await transporter.sendMail(mailOptions);
+    // await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
       body: "Message sent successfully",

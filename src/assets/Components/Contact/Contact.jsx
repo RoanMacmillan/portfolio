@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import ContactLink from "../ContactLink/ContactLink";
 import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
 import axios from "axios";
+import Modal from "../FormModal/modal";
 
 const Contact = () => {
   const [formWrapperRef, formWrapperVisible] = useIntersectionObserver();
@@ -14,6 +15,13 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isMessageSent, setIsMessageSent] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   const validateName = (name) => {
     if (name.trim() === "") {
@@ -39,11 +47,11 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     const nameError = validateName(name);
     const emailError = validateEmail(email);
     const messageError = validateMessage(message);
-  
+
     if (nameError || emailError || messageError) {
       setErrors({
         name: nameError,
@@ -52,20 +60,24 @@ const Contact = () => {
       });
       return;
     }
-  
+
     const data = {
       name,
       email,
       message,
     };
-  
+
     try {
       const response = await axios.post("/.netlify/functions/submitForm", data);
-  
+
       if (response.status === 200) {
         console.log("Message sent successfully");
         setErrors({});
         setFormSubmitted(true);
+        // setIsMessageSent(true);
+        setShowModal(true); // Show the modal
+        setMessage("");
+        setModalVisible(true);
       } else {
         console.error("Error sending message");
         setErrors({ form: "Error sending message. Please try again later." });
@@ -177,6 +189,11 @@ const Contact = () => {
               <button className={styles.submitBtn} type="submit">
                 Send Now
               </button>
+              {isMessageSent && (
+                <div className={styles.successMessage}>
+                  Message sent successfully!
+                </div>
+              )}
             </div>
           </div>
         </form>
@@ -188,6 +205,9 @@ const Contact = () => {
           <p>Send me a message and I will reach out as soon as possible.</p>
         </div>
       </div>
+      {showModal && (
+        <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
+      )}
 
       <ContactLink
         h3Text="View"
