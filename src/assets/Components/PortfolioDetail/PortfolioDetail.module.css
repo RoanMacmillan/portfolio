@@ -10,19 +10,7 @@
 }
 
 
-/* .heroWrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../../../public/assets/images/mobile/detail/hero-1.jpg");
-    background-size: cover;
-    background-position: center;
-    filter: brightness(40%);
 
-  } */
 
 .heroWrapper span,
 .heroWrapper h2 {
@@ -39,6 +27,7 @@
     font-size: 60px;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
+    
 
 }
 

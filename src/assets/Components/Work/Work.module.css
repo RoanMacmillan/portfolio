@@ -1,7 +1,6 @@
 main {
   padding: 1.5rem;
   padding-top: 0;
-  
 }
 
 h1 {
@@ -18,7 +17,6 @@ strong {
 
 .textContainer {
   margin-top: 120px;
-
 }
 
 .titleP {
@@ -39,13 +37,7 @@ strong {
   margin-top: 30px;
 }
 
-
-
-
-
 @media screen and (min-width: 700px) {
- 
-
   .itemLine {
     display: none;
   }
@@ -60,41 +52,35 @@ strong {
     max-width: 1228px;
     margin-left: auto;
     margin-right: auto;
-    
   }
 
   .row2 {
-    
-    /* margin-top: 100px; */
     margin-top: -100px;
   }
 
   .min {
     margin-top: 0 !important;
   }
- 
 }
 
-
 @media screen and (min-width: 1000px) {
-
   .textContainer h1 {
     font-size: 80px;
   }
 
   .textContainer {
     margin-top: 184px;
-  
   }
 
   .secondBreak {
     display: none;
   }
 
+  .workStrong {
+    margin-left: 15px;
+  }
 
   .row2 {
-    
-    /* margin-top: 100px; */
     margin-top: -180px;
   }
 
@@ -102,23 +88,8 @@ strong {
     margin-top: 0 !important;
   }
 
-  /* .contentTransition {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  .portfolioContainer {
+    margin-top: 100px;
   }
-  
-  .contentTransition.show {
-    opacity: 1 !important;
-    transform: translateY(0);
-  } */
- 
 }
 
-@media screen and (min-width: 1246px) {
-
-
-
-  
-
-}

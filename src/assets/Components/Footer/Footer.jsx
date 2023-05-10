@@ -40,8 +40,8 @@ const Footer = ({ className }) => {
         </div>
 
         <div className={styles.attributionWrapper}>
-          <p className={styles.attribution}>Icons created by Freepik.</p>
-          <p className={styles.attribution}>Designed by T Mazurczak.</p>
+          <p className={styles.attribution}>Skill Icons created by Freepik - Flaticon</p>
+          {/* <p className={styles.attribution}>Designed by T Mazurczak.</p> */}
         </div>
       </nav>
 

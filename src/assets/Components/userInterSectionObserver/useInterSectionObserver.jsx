@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 
-const useIntersectionObserver = (options = {}, shouldDisappear = false) => {
+const useIntersectionObserver = (
+  { threshold = 0, rootMargin = "0px" } = {},
+  shouldDisappear = false
+) => {
   const [isVisible, setIsVisible] = useState(false);
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
   const elementRef = useRef(null);
@@ -10,19 +13,22 @@ const useIntersectionObserver = (options = {}, shouldDisappear = false) => {
       return;
     }
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        setHasBeenVisible(true);
-        if (!shouldDisappear) {
-          observer.unobserve(entry.target);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          setHasBeenVisible(true);
+          if (!shouldDisappear) {
+            observer.unobserve(entry.target);
+          }
+        } else {
+          if (shouldDisappear || !hasBeenVisible) {
+            setIsVisible(false);
+          }
         }
-      } else {
-        if (shouldDisappear || !hasBeenVisible) {
-          setIsVisible(false);
-        }
-      }
-    }, options);
+      },
+      { threshold, rootMargin }
+    );
 
     observer.observe(elementRef.current);
 
@@ -31,9 +37,10 @@ const useIntersectionObserver = (options = {}, shouldDisappear = false) => {
         observer.unobserve(elementRef.current);
       }
     };
-  }, [elementRef, options, hasBeenVisible, shouldDisappear]);
+  }, [elementRef, threshold, rootMargin, hasBeenVisible, shouldDisappear]);
 
   return [elementRef, isVisible];
 };
 
 export default useIntersectionObserver;
+

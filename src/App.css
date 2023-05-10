@@ -92,13 +92,58 @@ a:hover {
   transition-delay: .2s;
 }
 
-.fadeInLoadOpacity {
+.fadeInLoadOpacity
+ {
   opacity: 1;
   visibility: visible;
   transition:  opacity .4s ease-in-out;
   
 }
 
+
+.fadeInSkills1 {
+
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s;
+  transition-delay: 0s;
+}
+
+.fadeInSkills2 {
+
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity .7s, transform .7s;
+  transition-delay: .1s;
+
+}
+
+.fadeInSkills3 {
+
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s;
+  transition-delay: .2s;
+
+}
+.fadeInSkills4 {
+
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s;
+  transition-delay: .3s;
+
+}
+
+.skillsHidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
 
 
 .hidden {

@@ -67,6 +67,7 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 24px;
+  outline: 1px solid red;
 }
 
 .skillsContainer {
@@ -117,7 +118,7 @@
 
 .servicesWrapper {
   margin-top: 60px;
-  background: black;
+  background: rgb(20, 20, 20);
   /* padding-bottom: 1.5rem; */
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -149,6 +150,10 @@
 .join {
   margin-bottom: 1rem;
 }
+
+
+
+
 
 @media screen and (min-width: 597px) {
 

@@ -4,7 +4,7 @@
     "thumbnail": "/assets/images/mobile/thumbnails/audio-thumb.png",
     "label": "01-04",
     "title": "Audiophile",
-    "detailTitle": "Audio Phile",
+    "detailTitle": "AudioPhile",
     "description": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system.",
     "smallDescription": "A clean user-friendly e-commerce site",
     "liveSite": "View live site",
@@ -23,8 +23,21 @@
     "label": "02-04",
     "liveSite": "View live site",
     "title": "Galleria",
-    "description": "Nullam tristique, sapien at lobortis ullamcorper, erat quam hendrerit tellus, ac consequat tortor lorem nec augue.",
-    "detailHero": "/assets/images/mobile/detail/hero-1.jpg"
+    "description": "A gallery site showcasing a images in a masonry-style layout, complete with a slideshow feature.",
+    "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
+    "demoURL": "https://prismatic-bublanina-c0f8ef.netlify.app/",
+    "codeURL": "https://github.com/RoanMacmillan/gallery-site",
+    "detailStatic1": "/assets/images/mobile/detail/gallery-main-2.png",
+    "detailStatic2": "/assets/images/mobile/detail/gallery-static-3.png",
+    "detailStatic3": "/assets/images/mobile/detail/gallery-static-3.png",
+    "smallDescription": "An elegant gallery with masonry-style layout",
+    "detailTitle": "Galleria",
+    "background": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system. his e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system."
+
+
+
+
+
   },
   {
     "id": "3",
@@ -32,19 +45,35 @@
     "label": "03-04",
     "liveSite": "View live site",
     "title": "Minimal",
-    "description": "Suspendisse quis mauris vel orci fermentum hendrerit. Etiam quis lectus at dolor rutrum suscipit a et arcu.",
-    "detailHero": "/assets/images/mobile/detail/hero-1.jpg"
+    "description": "A minimal portfolio template showcasing multiple projects, with a slideshow of portfolio items and detailed pages.",
+    "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
+    "demoURL": "https://prismatic-bublanina-c0f8ef.netlify.app/",
+    "codeURL": "https://github.com/RoanMacmillan/gallery-site",
+    "detailStatic1": "/assets/images/mobile/detail/min-main-2.png",
+    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.png",
+    "detailStatic3": "/assets/images/mobile/detail/min-static-3.png",
+    "smallDescription": "A minimal portfolio showcasing multiple projects",
+    "detailTitle": "Minimal",
+    "background": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system. his e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system."
   },
 
 
   {
     "id": "4",
-    "thumbnail": "/assets/images/mobile/thumbnails/insure-thumb.jpg",
+    "thumbnail": "/assets/images/mobile/thumbnails/designo-thumb.png",
     "label": "04-04",
     "liveSite": "View live site",
-    "title": "Insure",
-    "description": "Suspendisse quis mauris vel orci fermentum hendrerit. Etiam quis lectus at dolor rutrum suscipit a et arcu.",
-    "detailHero": "/assets/images/mobile/detail/hero-1.jpg"
+    "title": "Designo",
+    "description": "A multiple page design website, offering multiple services to clients, including web design and graphic design.",
+    "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
+    "demoURL": "https://prismatic-bublanina-c0f8ef.netlify.app/",
+    "codeURL": "https://github.com/RoanMacmillan/gallery-site",
+    "detailStatic1": "/assets/images/mobile/detail/designo-main.png",
+    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.png",
+    "detailStatic3": "/assets/images/mobile/detail/designo-static-4.png",
+    "smallDescription": "A multipage site template for a design agency",
+    "detailTitle": "Designo",
+    "background": "This Design site is a 7-page site with multiple features. It is a template for a design agency offering various services to clients, such as graphic design, web design and application development."
   }
 
 
