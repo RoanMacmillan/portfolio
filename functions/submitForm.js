@@ -29,12 +29,14 @@ exports.handler = async function (event, context) {
   };
 
   try {
+    console.log('Sending email:', mailOptions); // Add this line
     await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
       body: "Message sent successfully",
     };
   } catch (error) {
+    console.error('Error sending email:', error); // Add this line
     return {
       statusCode: 500,
       body: "Error sending message",
