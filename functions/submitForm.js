@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 
-const rateLimitWindow = 60 * 10000; // 60 seconds in milliseconds
+const rateLimitWindow = 60 * 1000; // 60 seconds in milliseconds
 const maxRequestsPerWindow = 5; // Max number of requests per IP in the rate limit window
 
 const requestCounts = {}; // Store request counts per IP address
