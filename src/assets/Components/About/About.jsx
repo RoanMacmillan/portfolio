@@ -20,11 +20,13 @@ const About = () => {
     skillsWrapperRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [aboutContainerRef, aboutContainerVisible] = useIntersectionObserver();
-  const [headingRef, headingVisible] = useIntersectionObserver();
+  
   const [skillRef, skillVisible1] = useIntersectionObserver();
   const [servicesWrapperRef, servicesWrapperVisible] = useIntersectionObserver();
   const [cardRef, cardVisible] = useIntersectionObserver();
+  const [skillsContainerRef, skillsContainerVisible] = useIntersectionObserver();
+  const [meWrapperRef, meWrapperVisible] = useIntersectionObserver();
+
 
   return (
     <div className={styles.about}>
@@ -36,9 +38,9 @@ const About = () => {
             <br className={styles.devBreak}></br>
           </h1>
           <div className={styles.headingLine}></div>
-          <div className={`${styles.meWrapper} ${styles.meWrapperMobile}`}>
+          {/* <div ref={meWrapperRef} className={`${styles.meWrapper} ${styles.meWrapperMobile} ${meWrapperVisible ? 'fadeIn' : 'hidden'}`}>
             <img className={styles.me} src={Me} alt={Me}></img>
-          </div>
+          </div> */}
 
           <div className={styles.aboutItemContainer}>
             <h2 className={styles.titleHeading}>About me</h2>
@@ -55,9 +57,9 @@ const About = () => {
           </div>
 
         </div>
-        <div className={`${styles.meWrapper} ${styles.meWrapperDesktop}`}>
+        {/* <div className={`${styles.meWrapper} ${styles.meWrapperDesktop}`}>
           <img className={styles.me} src={Me} alt={Me}></img>
-        </div>
+        </div> */}
       </div>
 
 
@@ -67,33 +69,43 @@ const About = () => {
 
         
 
-        <div className={styles.skillsContainer}>
-        <div ref={skillRef} className={`${styles.skillsChild} ${headingVisible ? 'fadeInSkills1' : 'skillsHidden'}`}>
-            <div className={styles.iconWrapper}>
+        <div ref={skillsContainerRef} className={styles.skillsContainer}>
+          <div className={styles.skillsTop}>
+        <div className={`${styles.skillsChild}`}>
+            {/* <div className={styles.iconWrapper}> */}
+              <div ref={skillRef} className={`${styles.iconWrapper} ${skillsContainerVisible ? 'fadeInSkills1' : 'skillsHidden'}`}>
               <img src={jsLogo} alt={jsLogo}></img>
             </div>
-            <span>Javascript</span>
+            {/* <span>Javascript</span> */}
           </div>
 
-          <div ref={skillRef} className={`${styles.skillsChild} ${headingVisible  ? 'fadeInSkills2' : 'skillsHidden'}`}>
-            <div className={styles.iconWrapper}>
+          <div className={`${styles.skillsChild} `}>
+            {/* <div className={styles.iconWrapper}> */}
+            <div ref={skillRef} className={`${styles.iconWrapper} ${skillsContainerVisible ? 'fadeInSkills2' : 'skillsHidden'}`}>
+
               <img src={cssLogo} alt={cssLogo}></img>
             </div>
-            <span>CSS 3</span>
+            {/* <span>CSS 3</span> */}
           </div>
+          </div>
+        <div className={styles.skillsBottom}>
+          <div className={`${styles.skillsChild} `}>
+            {/* <div className={styles.iconWrapper}> */}
+            <div ref={skillRef} className={`${styles.iconWrapper} ${skillsContainerVisible ? 'fadeInSkills3' : 'skillsHidden'}`}>
 
-          <div ref={skillRef} className={`${styles.skillsChild} ${headingVisible  ? 'fadeInSkills3' : 'skillsHidden'}`}>
-            <div className={styles.iconWrapper}>
               <img src={htmlLogo} alt={jsLogo}></img>
             </div>
-            <span>HTML 5</span>
+            {/* <span>HTML 5</span> */}
           </div>
 
-          <div ref={skillRef} className={`${styles.skillsChild} ${headingVisible  ? 'fadeInSkills4' : 'skillsHidden'}`}>
-            <div className={styles.iconWrapper}>
+          <div className={`${styles.skillsChild} `}>
+            {/* <div className={styles.iconWrapper}> */}
+            <div ref={skillRef} className={`${styles.iconWrapper} ${skillsContainerVisible ? 'fadeInSkills4' : 'skillsHidden'}`}>
+
               <img src={reactLogo} alt={jsLogo}></img>
             </div>
-            <span>React</span>
+            {/* <span>React</span> */}
+          </div>
           </div>
         </div>
       </div>
