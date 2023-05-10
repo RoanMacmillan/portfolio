@@ -21,11 +21,15 @@ const About = () => {
   };
 
   
-  const [skillRef, skillVisible1] = useIntersectionObserver();
   const [servicesWrapperRef, servicesWrapperVisible] = useIntersectionObserver();
   const [cardRef, cardVisible] = useIntersectionObserver();
-  const [skillsContainerRef, skillsContainerVisible] = useIntersectionObserver();
-  const [meWrapperRef, meWrapperVisible] = useIntersectionObserver();
+ 
+  const [iconWrapperRef1, iconWrapperVisible1] = useIntersectionObserver();
+  const [iconWrapperRef2, iconWrapperVisible2] = useIntersectionObserver();
+  const [iconWrapperRef3, iconWrapperVisible3] = useIntersectionObserver();
+  const [iconWrapperRef4, iconWrapperVisible4] = useIntersectionObserver();
+
+
 
 
   return (
@@ -69,11 +73,11 @@ const About = () => {
 
         
 
-        <div ref={skillsContainerRef} className={styles.skillsContainer}>
+        <div className={styles.skillsContainer}>
           <div className={styles.skillsTop}>
         <div className={`${styles.skillsChild}`}>
             {/* <div className={styles.iconWrapper}> */}
-              <div ref={skillRef} className={`${styles.iconWrapper} ${skillsContainerVisible ? 'fadeInSkills1' : 'skillsHidden'}`}>
+              <div ref={iconWrapperRef1} className={`${styles.iconWrapper} ${iconWrapperVisible1 ? 'fadeInSkills1' : 'skillsHidden'}`}>
               <img src={jsLogo} alt={jsLogo}></img>
             </div>
             {/* <span>Javascript</span> */}
@@ -81,7 +85,8 @@ const About = () => {
 
           <div className={`${styles.skillsChild} `}>
             {/* <div className={styles.iconWrapper}> */}
-            <div ref={skillRef} className={`${styles.iconWrapper} ${skillsContainerVisible ? 'fadeInSkills2' : 'skillsHidden'}`}>
+            <div ref={iconWrapperRef2} className={`${styles.iconWrapper} ${iconWrapperVisible2 ? 'fadeInSkills1' : 'skillsHidden'}`}>
+
 
               <img src={cssLogo} alt={cssLogo}></img>
             </div>
@@ -91,7 +96,8 @@ const About = () => {
         <div className={styles.skillsBottom}>
           <div className={`${styles.skillsChild} `}>
             {/* <div className={styles.iconWrapper}> */}
-            <div ref={skillRef} className={`${styles.iconWrapper} ${skillsContainerVisible ? 'fadeInSkills3' : 'skillsHidden'}`}>
+            <div ref={iconWrapperRef3} className={`${styles.iconWrapper} ${iconWrapperVisible3 ? 'fadeInSkills1' : 'skillsHidden'}`}>
+
 
               <img src={htmlLogo} alt={jsLogo}></img>
             </div>
@@ -100,7 +106,8 @@ const About = () => {
 
           <div className={`${styles.skillsChild} `}>
             {/* <div className={styles.iconWrapper}> */}
-            <div ref={skillRef} className={`${styles.iconWrapper} ${skillsContainerVisible ? 'fadeInSkills4' : 'skillsHidden'}`}>
+            <div ref={iconWrapperRef4} className={`${styles.iconWrapper} ${iconWrapperVisible4 ? 'fadeInSkills1' : 'skillsHidden'}`}>
+
 
               <img src={reactLogo} alt={jsLogo}></img>
             </div>
