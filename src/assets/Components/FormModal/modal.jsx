@@ -3,16 +3,8 @@ import styles from "./modal.module.css";
 import check from "../../Images/check.svg";
 import errorIcon from "../../Images/error.svg";
 
-const Modal = ({
-  closeModal,
-  modalVisible,
-  modalContent,
-}) => {
-
-
-    
-
-    console.log("Modal visible:", modalVisible); // Add this line
+const Modal = ({ closeModal, modalVisible, modalContent }) => {
+  console.log("Modal visible:", modalVisible); // Add this line
   const renderModalContent = () => {
     if (modalContent === "success") {
       return (
@@ -27,7 +19,9 @@ const Modal = ({
         <>
           <img src={errorIcon} alt="error" className={styles.errorIcon} />
           <h2>Error</h2>
-          <p>There was an error sending your message. Please try again later.</p>
+          <p>
+            There was an error sending your message. Please try again later.
+          </p>
         </>
       );
     }
@@ -35,9 +29,9 @@ const Modal = ({
 
   return (
     <div
-    className={`${styles.modal} ${modalVisible ? styles.modalVisible : ""}`}
-    onClick={closeModal}
-  >
+      className={`${styles.modal} ${modalVisible ? styles.modalVisible : ""}`}
+      onClick={closeModal}
+    >
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         {renderModalContent()}
         <button onClick={closeModal} className={styles.modalCloseButton}>
@@ -49,4 +43,3 @@ const Modal = ({
 };
 
 export default Modal;
-

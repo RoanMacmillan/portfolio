@@ -7,7 +7,6 @@
   margin-bottom: 1rem;
   font-size: 16px;
   color: black;
-
 }
 
 .portfolioItem h3 {
@@ -22,36 +21,21 @@
 .liveSite {
   text-decoration: underline;
   font-weight: 600;
-  /* font-size: .9rem; */
 }
-
-
-
-
 
 @media screen and (min-width: 700px) {
-  
+  .portfolioItem p {
+    width: 100%;
+    max-width: 100%;
+  }
 
- .portfolioItem p{
-
-  width: 100%;
-  max-widtH: 100%;
-  /* padding-right: 1.5rem; */
-  
- }
-
- .portfolioItem {
-  max-width: 500px;
-  margin-top: 75px;
- }
-
- 
-
+  .portfolioItem {
+    max-width: 500px;
+    margin-top: 75px;
+  }
 }
 
-
 @media screen and (min-width: 1000px) {
-
   .portfolioItem h3 {
     font-size: 32px;
   }
@@ -64,12 +48,11 @@
     overflow: hidden;
   }
 
-  .imageWrapper img:hover  {
+  .imageWrapper img:hover {
     transform: scale(105%);
   }
 
   .portfolioItem {
     margin-bottom: 100px;
   }
-
 }

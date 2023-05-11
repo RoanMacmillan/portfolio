@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { Link } from "react-router-dom";
 
 const Footer = ({ className }) => {
   return (
@@ -41,7 +40,6 @@ const Footer = ({ className }) => {
 
         <div className={styles.attributionWrapper}>
           <p className={styles.attribution}>Skill Icons created by Freepik - Flaticon</p>
-          {/* <p className={styles.attribution}>Designed by T Mazurczak.</p> */}
         </div>
       </nav>
 

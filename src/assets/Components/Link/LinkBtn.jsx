@@ -1,8 +1,5 @@
 import React from 'react'
 import styles from './LinkBtn.module.css'
-import { Link } from 'react-router-dom';
-import IconLinkArrow from '../../Images/icon-link-arrow.svg'
-
 
 const LinkBtn = ({linkToPage, linkContent, onClick}) => {
   return (

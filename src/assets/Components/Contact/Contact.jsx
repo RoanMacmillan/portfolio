@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import Mail from "../../Images/icon-mail.svg";
-import { Link } from "react-router-dom";
 import ContactLink from "../ContactLink/ContactLink";
 import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
 import axios from "axios";

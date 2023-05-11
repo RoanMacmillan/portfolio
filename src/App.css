@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap");
 
 *,
 *::before,
@@ -23,7 +23,6 @@ h1,
 h2,
 h3,
 h4,
-
 span,
 a {
   color: #181717;
@@ -35,20 +34,13 @@ html {
   color-scheme: dark light;
 }
 
-/* min body height */
-
 .App {
-
 }
 
 body {
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Poppins", sans-serif;
   background: #fdfdfd;
-  
-  /* max-width: 800px;
-  margin-left: auto;
-  margin-right: auto; */
 }
 
 p {
@@ -59,7 +51,6 @@ p {
   line-height: 1.7;
 }
 
-/* responsive images/videos */
 img,
 picture,
 svg,
@@ -69,40 +60,31 @@ video {
 }
 
 a:hover {
-  /* color: #5fb4a2; */
   cursor: pointer;
 }
-
-
 
 .fadeInLoad {
   opacity: 1;
   visibility: visible;
-  transition:  all .7s ease-in-out;
+  transition: all 0.7s ease-in-out;
   transform: translateY(0px);
-
 }
 
 .fadeInLoadDelay {
-
   opacity: 1;
   visibility: visible;
-  transition:  all .7s ease-in-out;
+  transition: all 0.7s ease-in-out;
   transform: translateY(0px);
-  transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 
-.fadeInLoadOpacity
- {
+.fadeInLoadOpacity {
   opacity: 1;
   visibility: visible;
-  transition:  opacity .4s ease-in-out;
-  
+  transition: opacity 0.4s ease-in-out;
 }
-
 
 .fadeInSkills1 {
-
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -111,32 +93,26 @@ a:hover {
 }
 
 .fadeInSkills2 {
-
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  transition: opacity .7s, transform .7s;
-  transition-delay: .1s;
-
+  transition: opacity 0.7s, transform 0.7s;
+  transition-delay: 0.1s;
 }
 
 .fadeInSkills3 {
-
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   transition: opacity 1s, transform 1s;
-  transition-delay: .2s;
-
+  transition-delay: 0.2s;
 }
 .fadeInSkills4 {
-
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   transition: opacity 1s, transform 1s;
-  transition-delay: .3s;
-
+  transition-delay: 0.3s;
 }
 
 .skillsHidden {
@@ -145,7 +121,6 @@ a:hover {
   transform: translateY(20px);
 }
 
-
 .hidden {
   opacity: 0;
   visibility: hidden;
@@ -153,23 +128,14 @@ a:hover {
 }
 
 .fadeInRight {
-
   opacity: 1;
-  /* visibility: visible; */
-  transition:  all .7s ease-in-out;
-  transition-delay: .4s;
-  /* transform: translateY(0px); */
-
+  transition: all 0.7s ease-in-out;
+  transition-delay: 0.4s;
 }
-
 
 .hiddenRight {
   opacity: 0;
-  /* visibility: hidden; */
-  /* transform: translateX(29px); */
-
 }
-
 
 .noScroll {
   overflow: hidden;

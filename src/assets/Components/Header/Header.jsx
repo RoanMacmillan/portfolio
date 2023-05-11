@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import hamburger from "../../Images/hamburger.svg";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import close from "../../Images/icon-close.svg";
+import classNames from "classnames";
 
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isDetailPage = location.pathname.includes("/portfolio/");
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   const handleHamburgerClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -71,11 +76,7 @@ const Header = () => {
                   isMenuOpen ? styles.open : ""
                 }`}
               >
-                <Link
-                  // className={styles.logoMobile}
-                  to="/"
-                  onClick={handleMenuLinkClick}
-                >
+                <Link to="/" onClick={handleMenuLinkClick}>
                   Portfolio
                 </Link>
                 <Link to="/about" onClick={handleMenuLinkClick}>
@@ -89,18 +90,57 @@ const Header = () => {
                 <div className={styles.linksContainer}>
                   <p>Follow me</p>
 
-                  <Link>Github</Link>
-                  <Link>Linkedin</Link>
-                  <Link>Twitter</Link>
+                  <a
+                    href="https://github.com/roanmacmillan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/roan-macmillan-8b9261273/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Linkedin
+                  </a>
+                  <a
+                    href="https://twitter.com/Petequinnn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Twitter
+                  </a>
                 </div>
                 <p className={styles.date}>Portfolio / 2023</p>
               </div>
             </div>
 
             <div className={styles.desktopLinks}>
-              <Link to="/">Portfolio</Link>
-              <Link to="/about">About Me</Link>
-              <Link to="/contact">Contact</Link>
+              <Link
+                className={classNames(styles.link, {
+                  [styles.activeLink]: isActive("/"),
+                })}
+                to="/"
+              >
+                Portfolio
+              </Link>
+              <Link
+                className={classNames(styles.link, {
+                  [styles.activeLink]: isActive("/about"),
+                })}
+                to="/about"
+              >
+                About
+              </Link>
+              <Link
+                className={classNames(styles.link, {
+                  [styles.activeLink]: isActive("/contact"),
+                })}
+                to="/contact"
+              >
+                Contact
+              </Link>
             </div>
           </nav>
         </div>

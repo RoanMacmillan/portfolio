@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./ContactLink.module.css";
 import { Link } from "react-router-dom";
 import arrowUp from "../../Images/icon-arrow-up.svg";

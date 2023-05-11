@@ -6,11 +6,9 @@ import useIntersectionObserver from "../userInterSectionObserver/useInterSection
 import LinkBtn from "../Link/LinkBtn";
 
 const PortfolioDetail = ({ portfolioData }) => {
-  // extracts id parameter to fetch details for corresponding portfolio item
   const { id } = useParams();
   const item = portfolioData.find((item) => item.id === id);
-  // const detailTitleArray = item.detailTitle.split(" ");
-  // const detailTitle = detailTitleArray.join("<br>");
+  
 
   const [staticWrapperRef, staticWrapperVisible] = useIntersectionObserver();
   const [staticWrapperRef2, staticWrapperVisible2] = useIntersectionObserver();
