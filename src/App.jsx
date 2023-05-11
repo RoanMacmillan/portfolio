@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./assets/Components/Header/Header";
 import Work from "./assets/Components/Work/Work";
 import Footer from "./assets/Components/Footer/Footer";
@@ -16,7 +16,6 @@ function App() {
       <BrowserRouter>
         <>
           <Header />
-
           <ScrollToTop />
           <Routes>
             <Route exact path="/" element={<Work />} />
@@ -43,4 +42,3 @@ function App() {
 }
 
 export default App;
-
