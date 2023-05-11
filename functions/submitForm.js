@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const rateLimitWindow = 60 * 1000; // 60 seconds in milliseconds
+const rateLimitWindow = 60 * 10000; // 60 seconds in milliseconds
 const maxRequestsPerWindow = 5; // Max number of requests per IP in the rate limit window
 
 const requestCounts = {}; // Store request counts per IP address
@@ -69,7 +69,7 @@ exports.handler = async function (event, context) {
 
   try {
     console.log("Sending email:", mailOptions); // Add this line
-    // await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
       body: "Message sent successfully",
