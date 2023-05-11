@@ -9,14 +9,9 @@
   box-sizing: border-box;
 }
 
-/* remove default spacing */
-/* force styling of type through styling, rather than elements */
-
 * {
   margin: 0;
   padding: 0;
-  /* font-family: "Manrope", sans-serif; */
-  /* font-family: "DM Sans", sans-serif; */
 }
 
 h1,
@@ -28,19 +23,22 @@ a {
   color: #181717;
 }
 
-/* dark mode user-agent-styles */
-
 html {
   color-scheme: dark light;
 }
 
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   background: #fdfdfd;
+  display: flex;
+  flex-direction: column;
 }
 
 p {

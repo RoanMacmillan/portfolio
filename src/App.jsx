@@ -12,7 +12,7 @@ import ScrollToTop from "./assets/Components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <BrowserRouter>
         <>
           <Header />
