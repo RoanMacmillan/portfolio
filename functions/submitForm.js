@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
 
-
 const rateLimitWindow = 60 * 1000; // 60 seconds in milliseconds
 const maxRequestsPerWindow = 5; // Max number of requests per IP in the rate limit window
 
@@ -14,7 +13,6 @@ function isRateLimited(ip) {
   while (requests.length > 0 && requests[0] < currentTime - rateLimitWindow) {
     requests.shift();
   }
-
 
   console.log(`IP: ${ip}, requests count: ${requests.length}`); // Log the number of requests from the IP address
 
@@ -39,8 +37,7 @@ exports.handler = async function (event, context) {
     };
   }
 
-
-  const clientIp = event.headers['client-ip'];
+  const clientIp = event.headers["client-ip"];
 
   if (isRateLimited(clientIp)) {
     return {
@@ -71,14 +68,14 @@ exports.handler = async function (event, context) {
   };
 
   try {
-    console.log('Sending email:', mailOptions); // Add this line
+    console.log("Sending email:", mailOptions); // Add this line
     // await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
       body: "Message sent successfully",
     };
   } catch (error) {
-    console.error('Error sending email:', error); // Add this line
+    console.error("Error sending email:", error); // Add this line
     return {
       statusCode: 500,
       body: "Error sending message",

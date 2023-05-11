@@ -15,17 +15,19 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [isMessageSent, setIsMessageSent] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
+  const [modalContent, setModalContent] = useState("success");
+
+
+  
 
   const closeModal = () => {
-    setShowModal(false);
+    setModalVisible(false);
   };
 
   const validateName = (name) => {
     if (name.trim() === "") {
-      return "*";
+      return "* Can't be blank";
     }
     return "";
   };
@@ -33,14 +35,14 @@ const Contact = () => {
   const validateEmail = (email) => {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     if (!email.match(emailRegex)) {
-      return "*";
+      return "* Invalid Email";
     }
     return "";
   };
 
   const validateMessage = (message) => {
-    if (message.trim() === "") {
-      return "*";
+    if (message.trim() === "" || message.trim().length < 10) {
+      return "* Please enter at least 10 characters";
     }
     return "";
   };
@@ -74,10 +76,9 @@ const Contact = () => {
         console.log("Message sent successfully");
         setErrors({});
         setFormSubmitted(true);
-        // setIsMessageSent(true);
-        setShowModal(true); // Show the modal
         setMessage("");
         setModalVisible(true);
+        setModalContent("success");
       } else {
         console.error("Error sending message");
         setErrors({ form: "Error sending message. Please try again later." });
@@ -85,6 +86,8 @@ const Contact = () => {
     } catch (error) {
       console.error("Error sending message", error);
       setErrors({ form: "Error sending message. Please try again later." });
+      setModalContent("error");
+      setModalVisible(true);
     }
   };
 
@@ -130,13 +133,13 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Din Djarin"
+                  placeholder="Your Name"
                   value={name}
                   onChange={(event) => setName(event.target.value)}
                 />
               </div>
               <div className={styles.formGroup}>
-                <label htmlFor="email">
+                <label htmlFor="email address">
                   Email Address{" "}
                   {errors.email && (
                     <div className={styles.error}>{errors.email}</div>
@@ -154,7 +157,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder="Your Email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                 />
@@ -189,11 +192,7 @@ const Contact = () => {
               <button className={styles.submitBtn} type="submit">
                 Send Now
               </button>
-              {isMessageSent && (
-                <div className={styles.successMessage}>
-                  Message sent successfully!
-                </div>
-              )}
+              
             </div>
           </div>
         </form>
@@ -205,8 +204,12 @@ const Contact = () => {
           <p>Send me a message and I will reach out as soon as possible.</p>
         </div>
       </div>
-      {showModal && (
-        <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
+      {modalVisible && (
+        <Modal
+          modalVisible={modalVisible}
+          closeModal={closeModal}
+          modalContent={modalContent}
+        />
       )}
 
       <ContactLink

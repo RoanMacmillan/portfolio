@@ -62,13 +62,25 @@
   width: 75px;
 }
 
+.errorIcon {
+    width: 75px;
+    filter: invert(12%) sepia(92%) saturate(7299%) hue-rotate(12deg) brightness(105%) contrast(120%);
+}
+
 .modalVisible {
   opacity: 1;
   visibility: visible;
 }
 
+
+
+
 @media screen and (min-width: 1000px) {
   .check {
+    width: 100px;
+  }
+
+  .errorIcon {
     width: 100px;
   }
 

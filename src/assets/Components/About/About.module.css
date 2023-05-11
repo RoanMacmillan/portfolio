@@ -1,11 +1,9 @@
 .about {
   margin-top: 120px;
-  /* padding-left: 1.5rem;
-  padding-right: 1.5rem; */
 }
 
-.skillsWrapper, .aboutContainer {
-
+.skillsWrapper,
+.aboutContainer {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -32,7 +30,6 @@
 
 .greeting {
   margin-top: 0rem;
-  /* padding-right: 4rem; */
   margin-bottom: 50px;
 }
 
@@ -57,7 +54,6 @@
   display: none;
 }
 
-
 .iconWrapper {
   width: 60px;
 }
@@ -65,19 +61,12 @@
 .skillsChild {
   display: flex;
   align-items: center;
-  /* gap: 12px; */
-  /* margin-bottom: 24px; */
-  /* outline: 1px solid red; */
-  /* border-top: 1px solid red; */
+
   width: 100%;
   justify-content: center;
-height: 230px;
-width: 50%;
-border-right: 1px solid rgb(219, 219, 219);
-
-  
-  
-  
+  height: 230px;
+  width: 50%;
+  border-right: 1px solid rgb(219, 219, 219);
 }
 
 .skillsContainer {
@@ -87,8 +76,6 @@ border-right: 1px solid rgb(219, 219, 219);
   max-width: 1180px;
   border: 1px solid rgb(219, 219, 219);
   border-right: none;
-
-
 }
 
 .skillsTop {
@@ -97,7 +84,6 @@ border-right: 1px solid rgb(219, 219, 219);
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid rgb(219, 219, 219);
-  
 }
 
 .skillsBottom {
@@ -106,7 +92,6 @@ border-right: 1px solid rgb(219, 219, 219);
   display: flex;
   flex-direction: row;
 }
-
 
 .skillsWrapper {
   margin-top: 60px;
@@ -122,14 +107,8 @@ border-right: 1px solid rgb(219, 219, 219);
   margin: 1.5rem;
   padding: 2.5rem 1.5rem 2.5rem 1.5rem;
   margin-top: 0;
-  /* padding-right: 1.5rem; */
-  /* padding: 25px; */
+
   outline: 1px solid rgb(43, 43, 43);
-
-}
-
-.middle {
-
 }
 
 .card img {
@@ -146,26 +125,21 @@ border-right: 1px solid rgb(219, 219, 219);
 .servicesWrapper {
   margin-top: 60px;
   background: rgb(20, 20, 20);
-  /* padding-bottom: 1.5rem; */
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 120px;
-
 }
 
 .titleWrapper {
   padding-left: 1.5rem;
-
 }
 
 .servicesWrapper img {
   filter: brightness(0) invert(1);
-
 }
 
 .servicesWrapper h3 {
   color: white;
-  /* padding-top: 1.5rem; */
   margin-bottom: 1rem;
 }
 
@@ -178,48 +152,20 @@ border-right: 1px solid rgb(219, 219, 219);
   margin-bottom: 1rem;
 }
 
-
-
-
-
-
 @media screen and (min-width: 597px) {
-
-
   .skillsWrapper {
-    /* justify-content: space-between; */
     max-width: 1180px;
     margin-left: auto;
     margin-right: auto;
-    
   }
-  
-  /* .skillsChild {
-    flex-basis: calc(33.3333% - 16px); 
-  }
-
-  .skillsChild:last-child {
-    flex-basis: 100%;
-  } */
 }
 
 @media screen and (min-width: 700px) {
-
-
-
-
-
-
   .card {
-
     padding-left: 3rem;
     padding-right: 3rem;
     padding: 3rem 3rem 3rem 3rem;
-
   }
-
-  
-
 
   .about h2 {
     margin-top: 50px;
@@ -236,21 +182,14 @@ border-right: 1px solid rgb(219, 219, 219);
   }
 
   .skillsWrapper h3 {
-    /* margin-top: 50px; */
     line-height: 1.2;
     font-weight: 700;
     font-size: 30px;
-    /* margin-bottom: 16px; */
-  }
-
-  .skillsChild {
-    /* margin-bottom: 50px; */
   }
 
   .skillsChild span {
     font-size: 1.3rem;
   }
-  
 
   .skillsContainer {
     margin-top: 74px;
@@ -260,9 +199,7 @@ border-right: 1px solid rgb(219, 219, 219);
     margin-top: 0px;
     padding-top: 25px;
     max-width: 1228px;
-
   }
-
 
   .aboutTextContainer {
     display: flex;
@@ -278,14 +215,9 @@ border-right: 1px solid rgb(219, 219, 219);
     display: unset;
   }
 
-  /* .aboutTextContainer a {
-    margin-top: auto;
-  } */
-
   .aboutContainer {
     display: flex;
     flex-direction: row;
-    /* height: 796px; */
     gap: 50px;
     max-width: 1228px;
     margin-left: auto;
@@ -329,21 +261,12 @@ border-right: 1px solid rgb(219, 219, 219);
     max-width: 500px !important;
   }
 
-  .aboutitemContainer {
-    /* margin-top: auto; */
-  }
-
   .aspiringBreak {
     display: none;
   }
 }
 
-
-
 @media screen and (min-width: 795px) {
-
-
-
   .cardContainer {
     flex-direction: row;
     max-width: 1228px;
@@ -353,7 +276,6 @@ border-right: 1px solid rgb(219, 219, 219);
     margin-right: auto;
     margin-top: 72px;
 
-    /* gap: 100px; */
     justify-content: space-between;
   }
 
@@ -361,16 +283,12 @@ border-right: 1px solid rgb(219, 219, 219);
     max-width: 1228px;
     margin-left: auto;
     margin-right: auto;
-    
   }
 
-  
   .card {
     padding: 1.5rem;
-    /* padding-bottom: 1.5rem;
-    padding-top: 1.5rem; */
+
     margin: 0;
-    /* outline: none; */
     max-width: 375px;
   }
 
@@ -393,19 +311,15 @@ border-right: 1px solid rgb(219, 219, 219);
   .skillsTop {
     border-bottom: none;
   }
-
 }
-
 
 @media screen and (min-width: 995px) {
   .about h1 {
     font-size: 80px;
-    
   }
 
   .devBreak {
     display: none;
-    
   }
 
   h1 strong {
@@ -417,7 +331,6 @@ border-right: 1px solid rgb(219, 219, 219);
   }
 
   .aboutContainer {
-    /* gap: 100px; */
     justify-content: space-between;
   }
 
@@ -428,15 +341,9 @@ border-right: 1px solid rgb(219, 219, 219);
   .meWrapper {
     height: 500px;
   }
-
-
-  
 }
 
-
-
 @media screen and (min-width: 1154px) {
-
   .card {
     padding: 2.5rem;
     padding-right: 2rem;
