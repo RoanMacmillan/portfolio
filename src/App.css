@@ -70,16 +70,16 @@ a:hover {
 
 .fadeInLoadDelay2 {
   opacity: 1;
-  visibility: visible;
-  transition: all 0.7s ease-in-out;
+  /* visibility: visible; */
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
   transform: translateY(0px);
   transition-delay: .2s;
 }
 
 .fadeInLoadDelay {
   opacity: 1;
-  visibility: visible;
-  transition: all 0.7s ease-in-out;
+  /* visibility: visible; */
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
   transform: translateY(0px);
   transition-delay: 0.2s;
 }
