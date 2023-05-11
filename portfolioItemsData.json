@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "thumbnail": "/assets/images/mobile/thumbnails/audio-thumb.png",
+    "thumbnail": "/assets/images/mobile/thumbnails/audio-thumb.webp",
     "label": "01-04",
     "title": "Audio",
     "detailTitle": "Audio",
@@ -11,15 +11,15 @@
     "demoURL": "https://master--astonishing-wisp-499e69.netlify.app/",
     "codeURL": "https://github.com/RoanMacmillan/audiophile-ecommerce-site",
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
-    "detailStatic1": "/assets/images/mobile/detail/audio-main-2.png",
-    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.png",
-    "detailStatic3": "/assets/images/mobile/detail/audio-static-3.png",
+    "detailStatic1": "/assets/images/mobile/detail/audio-main-2.webp",
+    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
+    "detailStatic3": "/assets/images/mobile/detail/audio-static-3.webp",
 
     "background": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system. his e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system."
   },
   {
     "id": "2",
-    "thumbnail": "/assets/images/mobile/thumbnails/gallery-thumb.png",
+    "thumbnail": "/assets/images/mobile/thumbnails/gallery-thumb.webp",
     "label": "02-04",
     "liveSite": "View live site",
     "title": "Galleria",
@@ -27,9 +27,9 @@
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
     "demoURL": "https://prismatic-bublanina-c0f8ef.netlify.app/",
     "codeURL": "https://github.com/RoanMacmillan/gallery-site",
-    "detailStatic1": "/assets/images/mobile/detail/gallery-main-2.png",
-    "detailStatic2": "/assets/images/mobile/detail/gallery-static-3.png",
-    "detailStatic3": "/assets/images/mobile/detail/gallery-static-3.png",
+    "detailStatic1": "/assets/images/mobile/detail/gallery-main-2.webp",
+    "detailStatic2": "/assets/images/mobile/detail/gallery-static-3.webp",
+    "detailStatic3": "/assets/images/mobile/detail/gallery-static-3.webp",
     "smallDescription": "An elegant gallery with masonry-style layout",
     "detailTitle": "Galleria",
     "background": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system. his e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system."
@@ -41,7 +41,7 @@
   },
   {
     "id": "3",
-    "thumbnail": "/assets/images/mobile/thumbnails/min-thumb.png",
+    "thumbnail": "/assets/images/mobile/thumbnails/min-thumb.webp",
     "label": "03-04",
     "liveSite": "View live site",
     "title": "Minimal",
@@ -49,9 +49,9 @@
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
     "demoURL": "https://frolicking-belekoy-38156d.netlify.app/",
     "codeURL": "https://github.com/RoanMacmillan/minimal-portfolio-site",
-    "detailStatic1": "/assets/images/mobile/detail/min-main-2.png",
-    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.png",
-    "detailStatic3": "/assets/images/mobile/detail/min-static-3.png",
+    "detailStatic1": "/assets/images/mobile/detail/min-main-2.webp",
+    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
+    "detailStatic3": "/assets/images/mobile/detail/min-static-3.webp",
     "smallDescription": "A minimal portfolio showcasing multiple projects",
     "detailTitle": "Minimal",
     "background": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system. his e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system."
@@ -60,7 +60,7 @@
 
   {
     "id": "4",
-    "thumbnail": "/assets/images/mobile/thumbnails/designo-thumb.png",
+    "thumbnail": "/assets/images/mobile/thumbnails/designo-thumb.webp",
     "label": "04-04",
     "liveSite": "View live site",
     "title": "Designo",
@@ -68,9 +68,9 @@
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
     "demoURL": "",
     "codeURL": "",
-    "detailStatic1": "/assets/images/mobile/detail/designo-main.png",
-    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.png",
-    "detailStatic3": "/assets/images/mobile/detail/designo-static-4.png",
+    "detailStatic1": "/assets/images/mobile/detail/designo-main.webp",
+    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
+    "detailStatic3": "/assets/images/mobile/detail/designo-static-4.webp",
     "smallDescription": "A multipage site template for a design agency",
     "detailTitle": "Designo",
     "background": "This Design site is a 7-page site with multiple features. It is a template for a design agency offering various services to clients, such as graphic design, web design and application development."
