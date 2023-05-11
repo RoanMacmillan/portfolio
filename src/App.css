@@ -68,6 +68,14 @@ a:hover {
   transform: translateY(0px);
 }
 
+.fadeInLoadDelay2 {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.7s ease-in-out;
+  transform: translateY(0px);
+  transition-delay: .2s;
+}
+
 .fadeInLoadDelay {
   opacity: 1;
   visibility: visible;

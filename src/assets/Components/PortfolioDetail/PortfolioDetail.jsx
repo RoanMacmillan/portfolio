@@ -32,7 +32,7 @@ const PortfolioDetail = ({ portfolioData }) => {
         <div
           ref={staticWrapperRef}
           className={`${styles.staticWrapper} ${
-            staticWrapperVisible ? "fadeInLoadDelay" : "hidden"
+            staticWrapperVisible ? "fadeInLoadDelay2" : "hidden"
           }`}
         >
           <img className={styles.staticImg} src={item.detailStatic1}></img>
@@ -56,7 +56,7 @@ const PortfolioDetail = ({ portfolioData }) => {
           <div
             ref={staticWrapperRef2}
             className={`${styles.staticWrapper} ${
-              staticWrapperVisible2 ? "fadeInLoad" : "hidden"
+              staticWrapperVisible2 ? "fadeInLoadDelay2" : "hidden"
             }`}
           >
             <img className={styles.staticImg} src={item.detailStatic3}></img>

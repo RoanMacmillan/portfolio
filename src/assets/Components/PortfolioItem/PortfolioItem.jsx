@@ -5,28 +5,23 @@ import useInterSectionObserver from "../userInterSectionObserver/useInterSection
 
 const PortfolioItem = ({
   id,
-  liveSite,
   label,
   thumbnail,
   title,
   description,
   className,
-  transitionDuration,
-  transitionDelay,
 }) => {
   const [imageWrapperRef, imageWrapperVisible] = useInterSectionObserver();
 
-  const itemStyle = {
-    transition: `opacity ${transitionDuration}s ease ${transitionDelay}s, transform ${transitionDuration}s ease ${transitionDelay}s`,
-  };
+ 
 
   return (
     <div
       ref={imageWrapperRef}
       className={`${styles.portfolioItem} ${className} ${
-        imageWrapperVisible ? "fadeInLoad" : "hidden"
+        imageWrapperVisible ? "fadeInLoadDelay2" : "hidden"
       } `}
-      style={itemStyle}
+    
     >
       <Link to={`/portfolio/${id}`}>
         <div className={styles.imageWrapper}>

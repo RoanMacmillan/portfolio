@@ -12,8 +12,12 @@ const Header = () => {
   const isDetailPage = location.pathname.includes("/portfolio/");
 
   const isActive = (path) => {
+    if (path === "/") {
+      return location.pathname === path || /^\/portfolio\/\d+$/.test(location.pathname);
+    }
     return location.pathname === path;
   };
+  
 
   const handleHamburgerClick = () => {
     setIsMenuOpen(!isMenuOpen);

@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 .env
+todo.md
 
 # Local Netlify folder
 .netlify
