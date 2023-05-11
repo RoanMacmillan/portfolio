@@ -138,7 +138,7 @@ const Contact = () => {
                 />
               </div>
               <div className={styles.formGroup}>
-                <label htmlFor="email address">
+                <label htmlFor="email">
                   Email Address{" "}
                   {errors.email && (
                     <div className={styles.error}>{errors.email}</div>
