@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import styles from "./PortfolioItem.module.css";
 import { Link } from "react-router-dom";
 import useInterSectionObserver from "../userInterSectionObserver/useInterSectionObserver";
@@ -6,12 +6,19 @@ import useInterSectionObserver from "../userInterSectionObserver/useInterSection
 const PortfolioItem = ({
   id,
   label,
-  thumbnail,
+  thumbnail, 
   title,
   description,
   className,
 }) => {
-  const [itemWrapperRef, itemWrapperVisible] = useInterSectionObserver();
+  const [itemWrapperRef, itemWrapperVisible] = useInterSectionObserver(.25);
+  const observerRef = useRef(null);
+
+  useEffect(() => {
+    if (observerRef.current) {
+      observerRef.current.observe(itemWrapperRef.current);
+    }
+  }, [itemWrapperRef]);
 
   return (
     <div className={`${styles.portfolioItem} ${className} `}>

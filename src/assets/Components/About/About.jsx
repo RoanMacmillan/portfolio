@@ -11,24 +11,24 @@ import iconCode from "../../Images/icon-code.svg";
 import responsive from "../../Images/responsive.svg";
 import paint from "../../Images/paint.svg";
 import join from "../../Images/join.svg";
-import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
+import useInterSectionObserver from "../userInterSectionObserver/useInterSectionObserver";
 
 const About = () => {
-  const skillsWrapperRef = useRef(); // Create a ref for the skillsWrapper
+  const skillsContainerRef = useRef(); // Create a ref for the skillsWrapper
 
   const scrollToSkillsWrapper = () => {
-    skillsWrapperRef.current.scrollIntoView({ behavior: "smooth" });
+    skillsContainerRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [cardRef1, cardVisible1] = useIntersectionObserver();
-  const [cardRef2, cardVisible2] = useIntersectionObserver();
-  const [cardRef3, cardVisible3] = useIntersectionObserver();
+  const [cardRef1, cardVisible1] = useInterSectionObserver();
+  const [cardRef2, cardVisible2] = useInterSectionObserver();
+  const [cardRef3, cardVisible3] = useInterSectionObserver();
 
 
-  const [iconWrapperRef1, iconWrapperVisible1] = useIntersectionObserver();
-  const [iconWrapperRef2, iconWrapperVisible2] = useIntersectionObserver();
-  const [iconWrapperRef3, iconWrapperVisible3] = useIntersectionObserver();
-  const [iconWrapperRef4, iconWrapperVisible4] = useIntersectionObserver();
+  const [iconWrapperRef1, iconWrapperVisible1] = useInterSectionObserver();
+  const [iconWrapperRef2, iconWrapperVisible2] = useInterSectionObserver();
+  const [iconWrapperRef3, iconWrapperVisible3] = useInterSectionObserver();
+  const [iconWrapperRef4, iconWrapperVisible4] = useInterSectionObserver();
 
   return (
     <div className={styles.about}>
@@ -45,7 +45,7 @@ const About = () => {
             <p className={styles.greeting}>
               Hi, I'm Roan Macmillan, a frontend developer based in Edinburgh.
               I'm passionate about creating intuitive websites that provide a
-              seamless user experience.
+              seamless user experience. You can check out my skills and services below.
             </p>
             <LinkBtn
               onClick={scrollToSkillsWrapper}
@@ -55,8 +55,8 @@ const About = () => {
         </div>
       </div>
 
-      <div ref={skillsWrapperRef} className={styles.skillsWrapper}>
-        <div className={styles.skillsContainer}>
+      <div  className={styles.skillsWrapper}>
+        <div ref={skillsContainerRef} className={styles.skillsContainer}>
           <div className={styles.skillsTop}>
             <div className={`${styles.skillsChild}`}>
               <div
