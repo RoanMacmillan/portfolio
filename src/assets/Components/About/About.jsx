@@ -20,9 +20,10 @@ const About = () => {
     skillsWrapperRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [servicesWrapperRef, servicesWrapperVisible] =
-    useIntersectionObserver();
-  const [cardRef, cardVisible] = useIntersectionObserver();
+  const [cardRef1, cardVisible1] = useIntersectionObserver();
+  const [cardRef2, cardVisible2] = useIntersectionObserver();
+  const [cardRef3, cardVisible3] = useIntersectionObserver();
+
 
   const [iconWrapperRef1, iconWrapperVisible1] = useIntersectionObserver();
   const [iconWrapperRef2, iconWrapperVisible2] = useIntersectionObserver();
@@ -48,7 +49,7 @@ const About = () => {
             </p>
             <LinkBtn
               onClick={scrollToSkillsWrapper}
-              linkContent="Read More"
+              linkContent="Read More" 
             ></LinkBtn>
           </div>
         </div>
@@ -105,7 +106,7 @@ const About = () => {
         </div>
       </div>
 
-      <div ref={servicesWrapperRef} className={styles.servicesWrapper}>
+      <div className={styles.servicesWrapper}>
         <div className={styles.titleWrapper}>
           <img className={styles.join} src={join} alt={join}></img>
           <h3>Services</h3>
@@ -113,10 +114,11 @@ const About = () => {
         </div>
 
         <div className={styles.cardContainer}>
+          <div className={styles.cardWrapper}>
           <div
-            ref={cardRef}
+            ref={cardRef1}
             className={`${styles.card} ${
-              servicesWrapperVisible ? "fadeInSkills1" : "skillsHidden"
+              cardVisible1 ? "fadeInSkills1" : "skillsHidden"
             } `}
           >
             <img src={iconCode} alt={iconCode}></img>
@@ -128,11 +130,13 @@ const About = () => {
               bring designs to life.
             </p>
           </div>
+          </div>
+          <div className={styles.cardWrapper}>
 
           <div
-            ref={cardRef}
+            ref={cardRef2}
             className={`${styles.card} ${
-              servicesWrapperVisible ? "fadeInSkills2" : "skillsHidden"
+              cardVisible2 ? "fadeInSkills2" : "skillsHidden"
             } `}
           >
             <img src={responsive} alt={iconCode}></img>
@@ -144,11 +148,14 @@ const About = () => {
               and function on any device.
             </p>
           </div>
+</div>
+
+<div className={styles.cardWrapper}>
 
           <div
-            ref={cardRef}
+            ref={cardRef3}
             className={`${styles.card} ${
-              servicesWrapperVisible ? "fadeInSkills3" : "skillsHidden"
+              cardVisible3 ? "fadeInSkills3" : "skillsHidden"
             } `}
           >
             <img src={paint} alt={iconCode}></img>
@@ -160,6 +167,8 @@ const About = () => {
               scratch or based on client requirements.
             </p>
           </div>
+          </div>
+
         </div>
       </div>
 
