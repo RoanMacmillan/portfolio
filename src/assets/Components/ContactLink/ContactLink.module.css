@@ -82,6 +82,16 @@
   transition: transform 0.4s ease;
 }
 
+.lineLoad {
+  width: 100%;
+  transition: width .7s linear;
+}
+
+.lineHidden {
+  width: 0%;
+  transition: width .7s linear;
+}
+
 @media screen and (min-width: 700px) {
   .scrollBtn {
     bottom: 50px;

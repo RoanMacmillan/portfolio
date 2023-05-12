@@ -13,22 +13,24 @@ const ContactLink = ({
 }) => {
   const [scrollBtnRef, scrollBtnVisible] = useInterSectionObserver();
   const [contactWrapperRef, contactWrapperVisible] = useInterSectionObserver();
+  const [contactLineRef, contactLineVisible] = useInterSectionObserver();
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth", 
     });
   };
 
   return (
     <>
       <div className={styles.contactLink}>
-        <div
-          className={`${styles.contactLine} ${
-            hideContactLine ? styles.hide : ""
-          }`}
-        ></div>
+      <div
+  ref={contactLineRef}
+  className={`${styles.contactLine} ${
+    hideContactLine ? styles.hide : ""
+  } ${contactLineVisible ? styles.lineLoad : styles.lineHidden}`}
+></div>
         <div
           ref={contactWrapperRef}
           className={`${styles.contactWrapper} ${
