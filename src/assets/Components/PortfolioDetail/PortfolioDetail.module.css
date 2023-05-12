@@ -76,8 +76,9 @@
 
 .titleDesc {
   margin-top: 40px;
-  max-width: 350px;
+  max-width: 400px;
   width: 80%;
+  
 }
 
 .staticWrapper {
@@ -111,6 +112,7 @@
 
   .description {
     margin-bottom: 4rem;
+    
   }
 
   .backgroundWrapper {
@@ -138,6 +140,7 @@
 
   .staticWrapper {
     margin-top: 5rem;
+    
   }
 
   .about {
@@ -161,7 +164,8 @@
 
   .titleDesc {
     margin-top: 40px;
-    width: 350px;
+    /* width: 350px; */
+    
   }
 
   .staticColumn {
@@ -174,4 +178,27 @@
     margin-right: auto;
     max-width: 1228px;
   }
+
+
+  /* .backgroundText {
+
+    width: 75%;
+  }
+
+  .linkContainer {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .backgroundTitle {
+    margin-bottom: 25px;
+  }
+
+  .backgroundCont {
+
+    margin-top: 150px;
+    margin-bottom: 150px;
+  } */
+
+
 }

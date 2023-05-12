@@ -12,10 +12,10 @@
     "codeURL": "https://github.com/RoanMacmillan/audiophile-ecommerce-site",
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
     "detailStatic1": "/assets/images/mobile/detail/audio-main-2.webp",
-    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
+    "detailStatic2": "/assets/images/mobile/detail/audio-static-new3.png",
     "detailStatic3": "/assets/images/mobile/detail/audio-static-3.webp",
 
-    "background": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system. his e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system."
+    "background": "This project is an e-commerce platform for purchasing audio equipment, which I built with React. It includes detailed pages of each item, a functional cart and checkout system."
   },
   {
     "id": "2",
@@ -32,7 +32,7 @@
     "detailStatic3": "/assets/images/mobile/detail/gallery-static-3.webp",
     "smallDescription": "An elegant gallery with masonry-style layout",
     "detailTitle": "Galleria",
-    "background": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system. his e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system."
+    "background": "A masonry style layout made with CSS grid and React. It features a slideshow and lightbox feature to view the images."
 
 
 
@@ -54,7 +54,7 @@
     "detailStatic3": "/assets/images/mobile/detail/min-static-3.webp",
     "smallDescription": "A minimal portfolio showcasing multiple projects",
     "detailTitle": "Minimal",
-    "background": "This e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system. his e-commerce site is a platform for selling audio equipment, complete with a functional cart and checkout system."
+    "background": "This minimal portfolio template was built with React. It showcases multiple portfolio projects, with an index, detailed pages for each item and a slideshow feature."
   },
 
 
