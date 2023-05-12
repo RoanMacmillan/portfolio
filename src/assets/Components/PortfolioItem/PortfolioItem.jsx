@@ -11,26 +11,25 @@ const PortfolioItem = ({
   description,
   className,
 }) => {
-  const [imageWrapperRef, imageWrapperVisible] = useInterSectionObserver();
-
- 
+  const [itemWrapperRef, itemWrapperVisible] = useInterSectionObserver();
 
   return (
-    <div
-      ref={imageWrapperRef}
-      className={`${styles.portfolioItem} ${className} ${
-        imageWrapperVisible ? "fadeInLoadDelay2" : "hidden"
-      } `}
-    
-    >
-      <Link to={`/portfolio/${id}`}>
-        <div className={styles.imageWrapper}>
-          <img src={thumbnail} alt={title} />
-        </div>
-      </Link>
-      <p className={styles.label}>{label}</p>
-      <h3>{title}</h3>
-      <p className={styles.description}>{description}</p>
+    <div className={`${styles.portfolioItem} ${className} `}>
+      <div
+        ref={itemWrapperRef}
+        className={`${styles.itemWrapper} ${
+          itemWrapperVisible ? "fadeInLoadDelay2" : "hidden"
+        }`}
+      >
+        <Link to={`/portfolio/${id}`}>
+          <div className={styles.imageWrapper}>
+            <img src={thumbnail} alt={title} />
+          </div>
+        </Link>
+        <p className={styles.label}>{label}</p>
+        <h3>{title}</h3>
+        <p className={styles.description}>{description}</p>
+      </div>
     </div>
   );
 };

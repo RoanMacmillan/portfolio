@@ -23,6 +23,14 @@
   font-weight: 600;
 }
 
+.itemWrapper {
+
+}
+
+.portfolioItem {
+  /* outline: 5px solid black; */
+}
+
 @media screen and (min-width: 700px) {
   .portfolioItem p {
     width: 100%;
