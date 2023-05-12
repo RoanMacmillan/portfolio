@@ -115,9 +115,7 @@
   width: 32px;
 }
 
-.cardWrapper {
-  outline: 2px solid red;
-}
+
 
 .cardContainer {
   display: flex;
