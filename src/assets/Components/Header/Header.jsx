@@ -52,6 +52,7 @@ const Header = () => {
               className={styles.hamburger}
               src={hamburger}
               onClick={handleHamburgerClick}
+              alt={hamburger}
             ></img>
 
             <div
@@ -70,6 +71,7 @@ const Header = () => {
 
                 <img
                   className={styles.hamburger}
+                  alt={hamburger}
                   src={close}
                   onClick={handleHamburgerClick}
                 ></img>
