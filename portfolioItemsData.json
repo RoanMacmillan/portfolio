@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "showLinks": true,
     "thumbnail": "/assets/images/mobile/thumbnails/audio-thumb.webp",
     "label": "01-04",
     "title": "Audio",
@@ -19,6 +20,7 @@
   },
   {
     "id": "2",
+    "showLinks": true,
     "thumbnail": "/assets/images/mobile/thumbnails/gallery-thumb.webp",
     "label": "02-04",
     "liveSite": "View live site",
@@ -41,6 +43,7 @@
   },
   {
     "id": "3",
+    "showLinks": true,
     "thumbnail": "/assets/images/mobile/thumbnails/min-thumb.webp",
     "label": "03-04",
     "liveSite": "View live site",
@@ -60,6 +63,7 @@
 
   {
     "id": "4",
+    "showLinks": false,
     "thumbnail": "/assets/images/mobile/thumbnails/designo-thumb.webp",
     "label": "04-04",
     "liveSite": "View live site",

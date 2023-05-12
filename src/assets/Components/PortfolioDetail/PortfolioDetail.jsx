@@ -43,9 +43,13 @@ const PortfolioDetail = ({ portfolioData }) => {
           <div className={styles.test2}>
             <p className={styles.background}>{item.background}</p>
             <div className={styles.detailLinks}>
-              <LinkBtn linkToPage={item.demoURL} linkContent="View Demo" />
-              <LinkBtn linkToPage={item.codeURL} linkContent="View Code" />
-            </div>
+  {item.showLinks && (
+    <>
+      <LinkBtn linkToPage={item.demoURL} linkContent="View Demo" />
+      <LinkBtn linkToPage={item.codeURL} linkContent="View Code" />
+    </>
+  )}
+</div>
           </div>
         </div>
 
