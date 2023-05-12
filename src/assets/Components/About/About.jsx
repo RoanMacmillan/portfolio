@@ -11,7 +11,7 @@ import iconCode from "../../Images/icon-code.svg";
 import responsive from "../../Images/responsive.svg";
 import paint from "../../Images/paint.svg";
 import join from "../../Images/join.svg";
-import useInterSectionObserver from "../userInterSectionObserver/useInterSectionObserver";
+import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
 
 const About = () => {
   const skillsContainerRef = useRef(); // Create a ref for the skillsWrapper
@@ -20,15 +20,15 @@ const About = () => {
     skillsContainerRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [cardRef1, cardVisible1] = useInterSectionObserver();
-  const [cardRef2, cardVisible2] = useInterSectionObserver();
-  const [cardRef3, cardVisible3] = useInterSectionObserver();
+  const [cardRef1, cardVisible1] = useIntersectionObserver();
+  const [cardRef2, cardVisible2] = useIntersectionObserver();
+  const [cardRef3, cardVisible3] = useIntersectionObserver();
 
 
-  const [iconWrapperRef1, iconWrapperVisible1] = useInterSectionObserver();
-  const [iconWrapperRef2, iconWrapperVisible2] = useInterSectionObserver();
-  const [iconWrapperRef3, iconWrapperVisible3] = useInterSectionObserver();
-  const [iconWrapperRef4, iconWrapperVisible4] = useInterSectionObserver();
+  const [iconWrapperRef1, iconWrapperVisible1] = useIntersectionObserver();
+  const [iconWrapperRef2, iconWrapperVisible2] = useIntersectionObserver();
+  const [iconWrapperRef3, iconWrapperVisible3] = useIntersectionObserver();
+  const [iconWrapperRef4, iconWrapperVisible4] = useIntersectionObserver();
 
   return (
     <div className={styles.about}>

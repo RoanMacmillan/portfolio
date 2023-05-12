@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import styles from "./Work.module.css";
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
 import portfolioData from "../../../../portfolioItemsData.json";
 import ContactLink from "../ContactLink/ContactLink";
 import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
+import LoadingModal from '../LoadingModal/LoadingModal';
 
 const Work = () => {
-  const [textContainerRef, textContainerVisible] = useIntersectionObserver();
+
+
+
+  const [transitionsEnabled, setTransitionsEnabled] = useState(false);
+  const [textContainerRef, textContainerVisible] = useIntersectionObserver({ transitionsEnabled: transitionsEnabled });
+  const [portfolioItemRef, portfolioItemVisible] = useIntersectionObserver({ transitionsEnabled: transitionsEnabled });
+  const [loading, setLoading] = useState(true);
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+      setTransitionsEnabled(true);
+      console.log('Transitions enabled:', transitionsEnabled); // Add this line to log the state
+    }, 3000);
+  
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+  
 
   return (
+
+    <>
+    {loading && <LoadingModal />}
     <main>
       <div
         ref={textContainerRef}
@@ -33,6 +57,7 @@ const Work = () => {
             title={portfolioData[0].title}
             description={portfolioData[0].description}
             liveSite={portfolioData[0].liveSite}
+            
           />
           <div className={styles.itemLine}></div>
 
@@ -79,6 +104,7 @@ const Work = () => {
         linkTo="/contact"
       />
     </main>
+    </>
   );
 };
 

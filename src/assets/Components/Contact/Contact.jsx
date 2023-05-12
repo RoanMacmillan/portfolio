@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import Mail from "../../Images/icon-mail.svg";
 import ContactLink from "../ContactLink/ContactLink";
-import useInterSectionObserver from "../userInterSectionObserver/useInterSectionObserver";
+import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
 import axios from "axios";
 import Modal from "../FormModal/modal";
 
 const Contact = () => {
-  const [formWrapperRef, formWrapperVisible] = useInterSectionObserver();
+  const [formWrapperRef, formWrapperVisible] = useIntersectionObserver();
 
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ContactLink.module.css";
 import { Link } from "react-router-dom";
 import arrowUp from "../../Images/icon-arrow-up.svg";
-import useInterSectionObserver from "../../Components/userInterSectionObserver/useInterSectionObserver";
+import useIntersectionObserver from "../../Components/userInterSectionObserver/useInterSectionObserver";
 
 const ContactLink = ({
   h3Text,
@@ -11,9 +11,9 @@ const ContactLink = ({
   linkTo,
   hideContactLine,
 }) => {
-  const [scrollBtnRef, scrollBtnVisible] = useInterSectionObserver();
-  const [contactWrapperRef, contactWrapperVisible] = useInterSectionObserver();
-  const [contactLineRef, contactLineVisible] = useInterSectionObserver();
+  const [scrollBtnRef, scrollBtnVisible] = useIntersectionObserver();
+  const [contactWrapperRef, contactWrapperVisible] = useIntersectionObserver();
+  const [contactLineRef, contactLineVisible] = useIntersectionObserver();
 
   const scrollToTop = () => {
     window.scrollTo({
