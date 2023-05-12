@@ -13,7 +13,7 @@ const Header = () => {
 
   const isActive = (path) => {
     if (path === "/") {
-      return location.pathname === path || /^\/portfolio\/\d+$/.test(location.pathname);
+      return location.pathname === path;
     }
     return location.pathname === path;
   };
