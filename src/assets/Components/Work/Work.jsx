@@ -1,109 +1,169 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import styles from "./Work.module.css";
-import PortfolioItem from "../PortfolioItem/PortfolioItem";
 import portfolioData from "../../../../portfolioItemsData.json";
 import ContactLink from "../ContactLink/ContactLink";
 import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
-import LoadingModal from '../LoadingModal/LoadingModal';
+import LoadingModal from "../LoadingModal/LoadingModal";
+import { Link } from "react-router-dom";
 
 const Work = () => {
-
-
-
   const [transitionsEnabled, setTransitionsEnabled] = useState(false);
-  const [textContainerRef, textContainerVisible] = useIntersectionObserver({ transitionsEnabled: transitionsEnabled });
-  const [portfolioItemRef, portfolioItemVisible] = useIntersectionObserver({ transitionsEnabled: transitionsEnabled });
+  const [textContainerRef, textContainerVisible] = useIntersectionObserver({
+    transitionsEnabled: transitionsEnabled,
+  });
   const [loading, setLoading] = useState(true);
-
+  const [itemWrapperRef, itemWrapperVisible] = useIntersectionObserver({
+    transitionsEnabled: transitionsEnabled,
+  });
+  const [itemWrapperRef1, itemWrapperVisible1] = useIntersectionObserver({
+    transitionsEnabled: transitionsEnabled,
+  });
+  const [itemWrapperRef2, itemWrapperVisible2] = useIntersectionObserver({
+    transitionsEnabled: transitionsEnabled,
+  });
+  const [itemWrapperRef3, itemWrapperVisible3] = useIntersectionObserver({
+    transitionsEnabled: transitionsEnabled,
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
       setTransitionsEnabled(true);
-      console.log('Transitions enabled:', transitionsEnabled); // Add this line to log the state
+      console.log("Loading state:", loading);
+      console.log("Transitions enabled:", transitionsEnabled); // Add this line to log the state
     }, 3000);
-  
+
     return () => {
       clearTimeout(timer);
     };
   }, []);
-  
 
   return (
-
     <>
-    {loading && <LoadingModal />}
-    <main>
-      <div
-        ref={textContainerRef}
-        className={`${styles.textContainer} ${
-          textContainerVisible ? "fadeInLoadOpacity" : "hidden"
-        } `}
-      >
-        <h1>
-          check<br></br>My<br className={styles.secondBreak}></br>
-          <strong className={styles.workStrong}>Portfolio</strong>
-        </h1>
-        <div className={styles.headingLine}></div>
-      </div>
-
-      <div className={styles.portfolioContainer}>
-        <div className={styles.row}>
-          <PortfolioItem
-            key={portfolioData[0].id}
-            id={portfolioData[0].id}
-            thumbnail={portfolioData[0].thumbnail}
-            label={portfolioData[0].label}
-            title={portfolioData[0].title}
-            description={portfolioData[0].description}
-            liveSite={portfolioData[0].liveSite}
-            
-          />
-          <div className={styles.itemLine}></div>
-
-          <PortfolioItem
-            key={portfolioData[1].id}
-            id={portfolioData[1].id}
-            thumbnail={portfolioData[1].thumbnail}
-            label={portfolioData[1].label}
-            title={portfolioData[1].title}
-            description={portfolioData[1].description}
-            liveSite={portfolioData[1].liveSite}
-          />
-
-          <div className={styles.itemLine}></div>
+      {loading && <LoadingModal />}
+      <main>
+        <div
+          ref={textContainerRef}
+          className={`${styles.textContainer} ${
+            textContainerVisible ? "fadeInLoadOpacity" : "hidden"
+          } `}
+        >
+          <h1>
+            check<br></br>My<br className={styles.secondBreak}></br>
+            <strong className={styles.workStrong}>Portfolio</strong>
+          </h1>
+          <div className={styles.headingLine}></div>
         </div>
-        <div className={styles.row2}>
-          <PortfolioItem
-            key={portfolioData[2].id}
-            id={portfolioData[2].id}
-            thumbnail={portfolioData[2].thumbnail}
-            label={portfolioData[2].label}
-            title={portfolioData[2].title}
-            description={portfolioData[2].description}
-            liveSite={portfolioData[2].liveSite}
-            className={styles.min}
-          />
-          <div className={styles.itemLine}></div>
 
-          <PortfolioItem
-            key={portfolioData[3].id}
-            id={portfolioData[3].id}
-            thumbnail={portfolioData[3].thumbnail}
-            label={portfolioData[3].label}
-            title={portfolioData[3].title}
-            description={portfolioData[3].description}
-            liveSite={portfolioData[3].liveSite}
-          />
+        <div className={styles.portfolioContainer}>
+          <div className={styles.row}>
+            <div className={`${styles.portfolioItem}  `}>
+              <div
+                ref={itemWrapperRef}
+                className={`${styles.itemWrapper} ${
+                  itemWrapperVisible ? "fadeInLoadDelay2" : "hidden"
+                }`}
+              >
+                <Link to={`/portfolio/${portfolioData[0].id}`}>
+                  <div className={styles.imageWrapper}>
+                    <img
+                      src={portfolioData[0].thumbnail}
+                      alt={portfolioData[0].title}
+                    />
+                  </div>
+                </Link>
+                <p className={styles.label}>{portfolioData[0].label}</p>
+                <h3>{portfolioData[0].title}</h3>
+                <p className={styles.description}>
+                  {portfolioData[0].description}
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.itemLine}></div>
+
+            <div className={`${styles.portfolioItem}  `}>
+              <div
+                ref={itemWrapperRef1}
+                className={`${styles.itemWrapper} ${
+                  itemWrapperVisible1 ? "fadeInLoadDelay2" : "hidden"
+                }`}
+              >
+                <Link to={`/portfolio/${portfolioData[1].id}`}>
+                  <div className={styles.imageWrapper}>
+                    <img
+                      src={portfolioData[1].thumbnail}
+                      alt={portfolioData[1].title}
+                    />
+                  </div>
+                </Link>
+                <p className={styles.label}>{portfolioData[0].label}</p>
+                <h3>{portfolioData[1].title}</h3>
+                <p className={styles.description}>
+                  {portfolioData[1].description}
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.itemLine}></div>
+          </div>
+          <div className={styles.row2}>
+
+          <div className={`${styles.portfolioItem}  `}>
+              <div
+                ref={itemWrapperRef2}
+                className={`${styles.itemWrapper} ${
+                  itemWrapperVisible2 ? "fadeInLoadDelay2" : "hidden"
+                }`}
+              >
+                <Link to={`/portfolio/${portfolioData[2].id}`}>
+                  <div className={styles.imageWrapper}>
+                    <img
+                      src={portfolioData[2].thumbnail}
+                      alt={portfolioData[2].title}
+                    />
+                  </div>
+                </Link>
+                <p className={styles.label}>{portfolioData[2].label}</p>
+                <h3>{portfolioData[2].title}</h3>
+                <p className={styles.description}>
+                  {portfolioData[2].description}
+                </p>
+              </div>
+            </div>
+            <div className={styles.itemLine}></div>
+
+            <div className={`${styles.portfolioItem}  `}>
+              <div
+                ref={itemWrapperRef3}
+                className={`${styles.itemWrapper} ${
+                  itemWrapperVisible3 ? "fadeInLoadDelay2" : "hidden"
+                }`}
+              >
+                <Link to={`/portfolio/${portfolioData[3].id}`}>
+                  <div className={styles.imageWrapper}>
+                    <img
+                      src={portfolioData[3].thumbnail}
+                      alt={portfolioData[3].title}
+                    />
+                  </div>
+                </Link>
+                <p className={styles.label}>{portfolioData[3].label}</p>
+                <h3>{portfolioData[3].title}</h3>
+                <p className={styles.description}>
+                  {portfolioData[3].description}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <ContactLink
-        h3Text="Let's"
-        strongText="Talk"
-        linkText="Contact"
-        linkTo="/contact"
-      />
-    </main>
+        <ContactLink
+          h3Text="Let's"
+          strongText="Talk"
+          linkText="Contact"
+          linkTo="/contact"
+        />
+      </main>
     </>
   );
 };
