@@ -4,7 +4,7 @@ import styles from "./PortfolioDetail.module.css";
 import ContactLink from "../ContactLink/ContactLink";
 import useIntersectionObserver from "../userInterSectionObserver/useInterSectionObserver";
 import LinkBtn from "../Link/LinkBtn";
-
+ 
 const PortfolioDetail = ({ portfolioData }) => {
   const { id } = useParams();
   const item = portfolioData.find((item) => item.id === id);

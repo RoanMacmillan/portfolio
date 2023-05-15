@@ -27,22 +27,23 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.classList.add(styles.noScroll);
-    } else {
-      document.body.classList.remove(styles.noScroll);
-    }
-  }, [isMenuOpen]);
+  // useEffect(() => {
+  //   if (isMenuOpen) {
+  //     document.body.classList.add(styles.noScroll);
+  //   } else {
+  //     document.body.classList.remove(styles.noScroll);
+  //   }
+  // }, [isMenuOpen]);
 
   return (
     <>
+            {/* <div className={styles.bar}></div> */}
+
       <header
         className={`${isDetailPage ? styles.detailHeader : ""} ${
           isMenuOpen ? styles.menuOpen : ""
         }`}
       >
-        {/* <div className={styles.bar}></div> */}
         <div className={styles.headerWrapper}>
           <Link className={styles.logo} to="/">
             rm
@@ -61,6 +62,8 @@ const Header = () => {
                 isMenuOpen ? styles.open : ""
               }`}
             >
+                          {/* <div className={styles.bar}></div> */}
+
               <div className={styles.headerWrapper}>
                 <Link
                   className={styles.logoMobile}
@@ -78,6 +81,8 @@ const Header = () => {
                 ></img>
               </div>
 
+              <div className={styles.mobileLinksWrapper}>
+
               <div
                 className={`${styles.mobileLinksContainer} ${
                   isMenuOpen ? styles.open : ""
@@ -93,8 +98,10 @@ const Header = () => {
                   Contact
                 </Link>
               </div>
+              </div>
               <div className={styles.mobileMenuFooter}>
                 <div className={styles.linksContainer}>
+                  <div className={styles.top}>
                   <p>Follow me</p>
 
                   <a
@@ -116,10 +123,23 @@ const Header = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Twitter
+                    Twitter 
                   </a>
+                  <a
+            href="https://www.frontendmentor.io/profile/RoanMacmillan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Frontend Mentor
+          </a>
+
+          </div>
+
+                  <p>Icons created by Freepik - Flaticon</p>
+
+
                 </div>
-                <p className={styles.date}>Portfolio / 2023</p>
+                {/* <p className={styles.date}>Portfolio / 2023</p> */}
               </div>
             </div>
 
