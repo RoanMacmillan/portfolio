@@ -42,6 +42,7 @@ const Header = () => {
           isMenuOpen ? styles.menuOpen : ""
         }`}
       >
+        {/* <div className={styles.bar}></div> */}
         <div className={styles.headerWrapper}>
           <Link className={styles.logo} to="/">
             rm

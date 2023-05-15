@@ -150,6 +150,15 @@ header {
   max-width: 1228px;
 }
 
+.bar {
+  height: 4px;
+  background: #181717;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media screen and (min-width: 700px) {
   .headerWrapper {
     max-width: 1180px;

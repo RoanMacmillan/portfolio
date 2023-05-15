@@ -7,40 +7,34 @@ import LoadingModal from "../LoadingModal/LoadingModal";
 import { Link } from "react-router-dom";
 
 const Work = () => {
+  const [modalVisible, setModalVisible] = useState(true);
   const [transitionsEnabled, setTransitionsEnabled] = useState(false);
-  const [textContainerRef, textContainerVisible] = useIntersectionObserver({
-    transitionsEnabled: transitionsEnabled,
-  });
-  const [loading, setLoading] = useState(true);
-  const [itemWrapperRef, itemWrapperVisible] = useIntersectionObserver({
-    transitionsEnabled: transitionsEnabled,
-  });
-  const [itemWrapperRef1, itemWrapperVisible1] = useIntersectionObserver({
-    transitionsEnabled: transitionsEnabled,
-  });
-  const [itemWrapperRef2, itemWrapperVisible2] = useIntersectionObserver({
-    transitionsEnabled: transitionsEnabled,
-  });
-  const [itemWrapperRef3, itemWrapperVisible3] = useIntersectionObserver({
-    transitionsEnabled: transitionsEnabled,
-  });
-
+  const [textContainerRef, textContainerVisible] = useIntersectionObserver({ transitionsEnabled });
+  const [itemWrapperRef, itemWrapperVisible] = useIntersectionObserver({ transitionsEnabled });
+  const [itemWrapperRef1, itemWrapperVisible1] = useIntersectionObserver({ transitionsEnabled });
+  const [itemWrapperRef2, itemWrapperVisible2] = useIntersectionObserver({ transitionsEnabled });
+  const [itemWrapperRef3, itemWrapperVisible3] = useIntersectionObserver({ transitionsEnabled });
+  
   useEffect(() => {
+    // Hide the loading modal after 3 seconds
     const timer = setTimeout(() => {
-      setLoading(false);
-      setTransitionsEnabled(true);
-      console.log("Loading state:", loading);
-      console.log("Transitions enabled:", transitionsEnabled); // Add this line to log the state
+      setModalVisible(false);
     }, 3000);
+
+    // Enable the transitions after the modal has disappeared
+    const transitionTimer = setTimeout(() => {
+      setTransitionsEnabled(true);
+    }, 4000); // This should be greater than the time taken by the modal to disappear
 
     return () => {
       clearTimeout(timer);
+      clearTimeout(transitionTimer);
     };
   }, []);
 
   return (
     <>
-      {loading && <LoadingModal />}
+    <LoadingModal isVisible={modalVisible} />
       <main>
         <div
           ref={textContainerRef}
