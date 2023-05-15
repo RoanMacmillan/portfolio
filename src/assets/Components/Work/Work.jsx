@@ -19,12 +19,12 @@ const Work = () => {
     // Hide the loading modal after 3 seconds
     const timer = setTimeout(() => {
       setModalVisible(false);
-    }, 3000);
+    }, 2000);
 
     // Enable the transitions after the modal has disappeared
     const transitionTimer = setTimeout(() => {
       setTransitionsEnabled(true);
-    }, 4000); // This should be greater than the time taken by the modal to disappear
+    }, 3000); // This should be greater than the time taken by the modal to disappear
 
     return () => {
       clearTimeout(timer);
