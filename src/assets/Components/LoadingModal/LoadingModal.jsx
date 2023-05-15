@@ -47,7 +47,7 @@ const LoadingModal = ({ isVisible }) => {
       <div className={styles.loadingBarContainer}>
         <div className={styles.loadingBar} style={{ width: `${loadingProgress}%` }} />
       </div>
-      <h1 className={styles.loadingTitle}>Roan Macmillan</h1>
+      <h1 className={styles.loadingTitle}>Loading...</h1>
     </div>
   ) : null;
 };

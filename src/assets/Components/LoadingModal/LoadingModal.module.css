@@ -14,7 +14,7 @@
 
   .loadingModal h1 {
     color: #fdfdfd;
-    font-size: 1.5rem;
+    font-size: 60px;
   }
 
   .fadeIn {
@@ -71,6 +71,6 @@
   @media screen and (min-width: 1000px) {
 
     .loadingModal h1 {
-      font-size: 2rem;
+      font-size: 80px;
     }
   }
