@@ -119,7 +119,7 @@ const Header = () => {
                     Linkedin
                   </a>
                   <a
-                    href="https://twitter.com/Petequinnn"
+                    href="https://twitter.com/_roanmacmillan"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
