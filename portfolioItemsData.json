@@ -63,21 +63,21 @@
 
   {
     "id": "4",
-    "showLinks": false,
-    "thumbnail": "/assets/images/mobile/thumbnails/designo-thumb.webp",
+    "showLinks": true,
+    "thumbnail": "/assets/images/mobile/thumbnails/arch-thumb.png",
     "label": "04-04",
     "liveSite": "View live site",
-    "title": "Designo",
-    "description": "A multiple page design website, offering multiple services to clients, including web design and graphic design.",
+    "title": "Arch",
+    "description": "An Architecture portfolio showcasing different projects, with a slideshow feature and various detailed pages.",
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
     "demoURL": "",
     "codeURL": "",
-    "detailStatic1": "/assets/images/mobile/detail/designo-main.webp",
+    "detailStatic1": "/assets/images/mobile/detail/arch-static-1.png",
     "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
-    "detailStatic3": "/assets/images/mobile/detail/designo-static-4.webp",
-    "smallDescription": "A multipage site template for a design agency",
-    "detailTitle": "Designo",
-    "background": "This Design site is a 7-page site with multiple features. It is a template for a design agency offering various services to clients, such as graphic design, web design and application development."
+    "detailStatic3": "/assets/images/mobile/detail/arch-static-2.png",
+    "smallDescription": "A multiple page architecure portfolio template.",
+    "detailTitle": "Arch",
+    "background": "An Architecure portfolio that displays multiple projects, built with react. It includes a detailed about and contact page, with leafletjs for the map feature."
   }
 
 
