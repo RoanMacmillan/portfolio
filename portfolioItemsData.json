@@ -44,7 +44,7 @@
   {
     "id": "3",
     "showLinks": true,
-    "thumbnail": "/assets/images/mobile/thumbnails/arch-thumb.png",
+    "thumbnail": "/assets/images/mobile/thumbnails/arch-thumb.webp",
     "label": "04-04",
     "liveSite": "View live site",
     "title": "Arch",
@@ -52,9 +52,9 @@
     "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
     "demoURL": "https://arch-studio-vite.netlify.app/",
     "codeURL": "https://github.com/RoanMacmillan/arch-studio-vite",
-    "detailStatic1": "/assets/images/mobile/detail/arch-static-1.png",
+    "detailStatic1": "/assets/images/mobile/detail/arch-static-1.webp",
     "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
-    "detailStatic3": "/assets/images/mobile/detail/arch-static-2.png",
+    "detailStatic3": "/assets/images/mobile/detail/arch-static-2.webp",
     "smallDescription": "A multiple page architecure portfolio template.",
     "detailTitle": "Arch",
     "background": "An Architecure portfolio that displays multiple projects, built with react. It includes a detailed about and contact page, with leafletjs for the map feature."
