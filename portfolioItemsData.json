@@ -55,7 +55,7 @@
     "detailStatic1": "/assets/images/mobile/detail/arch-static-1.webp",
     "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
     "detailStatic3": "/assets/images/mobile/detail/arch-static-2.webp",
-    "smallDescription": "A multiple page architecure portfolio template.",
+    "smallDescription": "A visually captivating architecture portfolio",
     "detailTitle": "Arch",
     "background": "An Architecure portfolio that displays multiple projects, built with react. It includes a detailed about and contact page, with leafletjs for the map feature."
   },
@@ -75,7 +75,7 @@
     "detailStatic1": "/assets/images/mobile/detail/min-main-2.webp",
     "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
     "detailStatic3": "/assets/images/mobile/detail/min-static-3.webp",
-    "smallDescription": "A minimal portfolio showcasing multiple projects",
+    "smallDescription": "A frontend portfolio showcasing multiple projects",
     "detailTitle": "Minimal",
     "background": "This minimal portfolio template was built with React. It showcases multiple portfolio projects, with an index, detailed pages for each item and a slideshow feature."
   }
