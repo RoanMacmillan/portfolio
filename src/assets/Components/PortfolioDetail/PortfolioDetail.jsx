@@ -20,7 +20,7 @@ const PortfolioDetail = ({ portfolioData }) => {
           staticWrapperVisible ? "fadeInLoadOpacity" : "hidden"
         }`}
       >
-        <span>{`0${item.id}-03`}</span>
+        <span>{`0${item.id}-04`}</span>
         <h2>{item.detailTitle}</h2>
         <div className={styles.line}></div>
         <p className={styles.titleDesc}>{item.description}</p>
