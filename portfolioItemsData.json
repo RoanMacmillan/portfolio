@@ -44,26 +44,6 @@
   {
     "id": "3",
     "showLinks": true,
-    "thumbnail": "/assets/images/mobile/thumbnails/min-thumb.webp",
-    "label": "03-04",
-    "liveSite": "View live site",
-    "title": "Minimal",
-    "description": "A minimal portfolio template showcasing multiple projects, with a slideshow of portfolio items and detailed pages.",
-    "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
-    "demoURL": "https://frolicking-belekoy-38156d.netlify.app/",
-    "codeURL": "https://github.com/RoanMacmillan/minimal-portfolio-site",
-    "detailStatic1": "/assets/images/mobile/detail/min-main-2.webp",
-    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
-    "detailStatic3": "/assets/images/mobile/detail/min-static-3.webp",
-    "smallDescription": "A minimal portfolio showcasing multiple projects",
-    "detailTitle": "Minimal",
-    "background": "This minimal portfolio template was built with React. It showcases multiple portfolio projects, with an index, detailed pages for each item and a slideshow feature."
-  },
-
-
-  {
-    "id": "4",
-    "showLinks": true,
     "thumbnail": "/assets/images/mobile/thumbnails/arch-thumb.png",
     "label": "04-04",
     "liveSite": "View live site",
@@ -78,6 +58,26 @@
     "smallDescription": "A multiple page architecure portfolio template.",
     "detailTitle": "Arch",
     "background": "An Architecure portfolio that displays multiple projects, built with react. It includes a detailed about and contact page, with leafletjs for the map feature."
+  },
+
+
+  {
+    "id": "4",
+    "showLinks": true,
+    "thumbnail": "/assets/images/mobile/thumbnails/min-thumb.webp",
+    "label": "03-04",
+    "liveSite": "View live site",
+    "title": "Minimal",
+    "description": "A minimal portfolio template showcasing multiple projects, with a slideshow of portfolio items and detailed pages.",
+    "detailHero": "/assets/images/mobile/detail/hero-1.jpg",
+    "demoURL": "https://frolicking-belekoy-38156d.netlify.app/",
+    "codeURL": "https://github.com/RoanMacmillan/minimal-portfolio-site",
+    "detailStatic1": "/assets/images/mobile/detail/min-main-2.webp",
+    "detailStatic2": "/assets/images/mobile/detail/audio-static-3.webp",
+    "detailStatic3": "/assets/images/mobile/detail/min-static-3.webp",
+    "smallDescription": "A minimal portfolio showcasing multiple projects",
+    "detailTitle": "Minimal",
+    "background": "This minimal portfolio template was built with React. It showcases multiple portfolio projects, with an index, detailed pages for each item and a slideshow feature."
   }
 
 
