@@ -91,7 +91,7 @@ const Work = () => {
                     />
                   </div>
                 </Link>
-                <p className={styles.label}>{portfolioData[0].label}</p>
+                <p className={styles.label}>{portfolioData[1].label}</p>
                 <h3>{portfolioData[1].title}</h3>
                 <p className={styles.description}>
                   {portfolioData[1].description}
