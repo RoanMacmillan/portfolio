@@ -16,7 +16,7 @@ const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState("success");
-
+  const [isLoading, setIsLoading] = useState(false);
 
   
 
@@ -48,11 +48,11 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+  
     const nameError = validateName(name);
     const emailError = validateEmail(email);
     const messageError = validateMessage(message);
-
+  
     if (nameError || emailError || messageError) {
       setErrors({
         name: nameError,
@@ -61,16 +61,18 @@ const Contact = () => {
       });
       return;
     }
-
+  
     const data = {
       name,
       email,
       message,
     };
-
+  
+    setIsLoading(true); // Set isLoading to true before sending the request
+  
     try {
       const response = await axios.post("/.netlify/functions/submitForm", data);
-
+  
       if (response.status === 200) {
         console.log("Message sent successfully");
         setErrors({});
@@ -87,9 +89,10 @@ const Contact = () => {
       setErrors({ form: "Error sending message. Please try again later." });
       setModalContent("error");
       setModalVisible(true);
+    } finally {
+      setIsLoading(false); // Set isLoading back to false once the request is finished
     }
   };
-
   return (
     <div className={styles.contact}>
       <h1>
@@ -188,9 +191,9 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className={styles.tyContainer}>
-              <button className={styles.submitBtn} type="submit">
-                Send Now
-              </button>
+            <button className={styles.submitBtn} type="submit" disabled={isLoading}>
+  {isLoading ? 'Loading...' : 'Send Now'}
+</button>
               
             </div>
           </div>
