@@ -60,13 +60,22 @@ header {
 .hamburger {
   cursor: pointer;
   transition: all .2s ease;
-  
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
+}
+
+.hamLine {
+  height: 2px;
+  width: 90%;
+  background: black;
 }
 
 .hamburger:hover {
   filter: invert(65%) sepia(45%) saturate(332%) hue-rotate(117deg) brightness(90%) contrast(95%);
-  /* transform: scale(1.1); */
+  transform: scale(1.1);
 }
 
 .logoMobile {
@@ -86,7 +95,7 @@ header {
   color:#5fb4a2;
 
 }
-
+ 
 .mobileMenu .hamburger {
   width: 30px;
   filter: brightness(0) invert(1);
@@ -208,6 +217,8 @@ header {
 }
 
 
+
+
 @media screen and (min-width: 700px) {
   .headerWrapper {
     /* max-width: 1180px; */
@@ -222,6 +233,7 @@ header {
 
   .mobileLinksContainer {
     max-width: 1228px;
+    
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -282,6 +294,8 @@ header {
   .headerWrapper {
     max-width: 1228px;
     /* outline: 2px solid red; */
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
   }
 
   .desktopLinks a {
@@ -307,3 +321,12 @@ header {
 
 
 }
+
+/* @media screen and (min-width: 1440px) {
+
+
+  header {
+
+    position: fixed;
+  }
+} */
