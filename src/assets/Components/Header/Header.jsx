@@ -17,7 +17,6 @@ const Header = () => {
     }
     return location.pathname === path;
   };
-  
 
   const handleHamburgerClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -37,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-            {/* <div className={styles.bar}></div> */}
+      {/* <div className={styles.bar}></div> */}
 
       <header
         className={`${isDetailPage ? styles.detailHeader : ""} ${
@@ -49,20 +48,20 @@ const Header = () => {
             rm
           </Link>
 
-          <nav className={styles.headerNav}>
-            <img
-              className={styles.hamburger}
-              src={hamburger}
-              onClick={handleHamburgerClick}
-              alt={hamburger}
-            ></img>
+
+          <nav onClick={handleHamburgerClick} className={styles.headerNav}>
+            <div className={styles.hamburger}>
+              <div className={styles.hamLine}></div>
+
+              <div className={styles.hamLine}></div>
+            </div>
 
             <div
               className={`${styles.mobileMenu} ${
                 isMenuOpen ? styles.open : ""
               }`}
             >
-                          {/* <div className={styles.bar}></div> */}
+              {/* <div className={styles.bar}></div> */}
 
               <div className={styles.headerWrapper}>
                 <Link
@@ -82,62 +81,58 @@ const Header = () => {
               </div>
 
               <div className={styles.mobileLinksWrapper}>
-
-              <div
-                className={`${styles.mobileLinksContainer} ${
-                  isMenuOpen ? styles.open : ""
-                }`}
-              >
-                <Link to="/" onClick={handleMenuLinkClick}>
-                  Portfolio
-                </Link>
-                <Link to="/about" onClick={handleMenuLinkClick}>
-                  About me
-                </Link>
-                <Link to="/contact" onClick={handleMenuLinkClick}>
-                  Contact
-                </Link>
-              </div>
+                <div
+                  className={`${styles.mobileLinksContainer} ${
+                    isMenuOpen ? styles.open : ""
+                  }`}
+                >
+                  <Link to="/" onClick={handleMenuLinkClick}>
+                    Portfolio
+                  </Link>
+                  <Link to="/about" onClick={handleMenuLinkClick}>
+                    About me
+                  </Link>
+                  <Link to="/contact" onClick={handleMenuLinkClick}>
+                    Contact
+                  </Link>
+                </div>
               </div>
               <div className={styles.mobileMenuFooter}>
                 <div className={styles.linksContainer}>
                   <div className={styles.top}>
-                  <p>Follow me</p>
+                    <p>Follow me</p>
 
-                  <a
-                    href="https://github.com/roanmacmillan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Github
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/roan-macmillan-8b9261273/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Linkedin
-                  </a>
-                  <a
-                    href="https://twitter.com/_roanmacmillan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Twitter 
-                  </a>
-                  <a
-            href="https://www.frontendmentor.io/profile/RoanMacmillan"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Frontend Mentor
-          </a>
-
-          </div>
+                    <a
+                      href="https://github.com/roanmacmillan"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Github
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/roan-macmillan-8b9261273/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://twitter.com/_roanmacmillan"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Twitter
+                    </a>
+                    <a
+                      href="https://www.frontendmentor.io/profile/RoanMacmillan"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Frontend Mentor
+                    </a>
+                  </div>
 
                   <p>Icons created by Freepik - Flaticon</p>
-
-
                 </div>
                 {/* <p className={styles.date}>Portfolio / 2023</p> */}
               </div>

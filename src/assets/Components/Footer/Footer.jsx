@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-
+import Clock from "../Clock/Clock";
 const Footer = ({ className }) => {
   return (
     <footer>
@@ -43,7 +43,8 @@ const Footer = ({ className }) => {
         </div>
       </nav>
 
-      <p className={styles.year}>Roan Macmillan - 2023</p>
+      {/* <p className={styles.year}>Roan Macmillan - 2023</p> */}
+      <Clock />
     </footer>
   );
 };

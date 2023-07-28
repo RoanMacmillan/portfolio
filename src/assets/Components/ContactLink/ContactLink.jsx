@@ -45,10 +45,12 @@ const ContactLink = ({
           <div className={styles.cLinkContainer}>
             <Link to={linkTo} className={styles.contactA}>
               {linkText}
-            </Link>
             <div className={styles.contactUnderline}>
               <div className={styles.loadingLine}></div>
             </div>
+            </Link>
+
+
           </div>
         </div>
 
