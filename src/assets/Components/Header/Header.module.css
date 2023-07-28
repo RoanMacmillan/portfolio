@@ -7,6 +7,17 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: color .3s ease;
+
+}
+
+
+@keyframes customFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 header {
@@ -23,6 +34,7 @@ header {
   width: 100%;
   z-index: 1000;
   height: 90px;
+
 }
 
 .headerWrapper {
@@ -31,7 +43,11 @@ header {
   width: 100%;
   align-items: center;
   /* position: fixed; */
+  animation: customFade 1s ease-in-out;
+
 }
+
+
 
 .headerNav {
   display: flex;
